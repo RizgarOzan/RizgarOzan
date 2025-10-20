@@ -4,8 +4,8 @@
 <br>
 
 <p align="left"> 
-  🌱 I’m currently learning **Web Development**, **C++** and **Blender**. <br>
-  📫 How to reach me: **rizgarozan7@gmail.com**
+  🌱 I’m currently learning <strong>Web Development</strong>, <strong>C++</strong> and <strong>Blender</strong>. <br>
+  📫 How to reach me: <strong>rizgarozan7@gmail.com</strong>
 </p>
 
 <hr>
