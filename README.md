@@ -40,7 +40,3 @@
   <br><br>
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=RizgarOzan&show_icons=true&layout=compact&theme=radical" alt="RizgarOzan's Top Languages" />
 </p>
-
-<p align="center"> 
-  <img src="https://komarev.com/ghpvc/?username=RizgarOzan&label=Profile%20Visitors&color=0e75b6&style=flat" alt="rizgarozan profile visitors" /> 
-</p>
