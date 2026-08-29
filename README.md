@@ -45,13 +45,18 @@
 | 🌐 | Personal portfolio website | In progress |
 | 📚 | [BTE311 Web Programming](https://github.com/RizgarOzan/BTE311-Web-programlama) — coursework | Done |
 
-### 📊 Stats
+### 📊 Activity
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=RizgarOzan&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="GitHub stats" height="165" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=RizgarOzan&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" height="165" />
-
 <img src="https://streak-stats.demolab.com?user=RizgarOzan&theme=tokyonight&hide_border=true" alt="GitHub streak" />
+
+<br>
+
+<img src="https://ghchart.rshah.org/26a641/RizgarOzan" alt="Contribution graph" width="90%" />
+
+<br><br>
+
+<img src="https://komarev.com/ghpvc/?username=RizgarOzan&style=flat-square&color=1a1b27&label=profile+views" alt="Profile views" />
 
 </div>
