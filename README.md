@@ -1,62 +1,57 @@
-<h1 align="center">Hi there, I'm Rızgar Ozan 👋</h1>
-<h3 align="center">CEIT Student @ Hacettepe University · Game Developer in the Making</h3>
+<div align="center">
 
-<br>
+# Rızgar Ozan
 
-<p align="left">
-  🎮 I'm currently building a 2D game in <strong>Unity</strong> — a restaurant management sim with turn-based RPG combat, written in <strong>C#</strong>. <br>
-  🌱 I'm also learning <strong>Web Development</strong>, <strong>C++</strong> and <strong>Blender</strong>. <br>
-  🧩 I practice problem solving with <a href="https://github.com/RizgarOzan/leetcode-solutions">LeetCode</a>. <br>
-  📫 How to reach me: <strong>rizgarozan7@gmail.com</strong>
-</p>
+**Game Developer in the making** · CEIT Student @ Hacettepe University
 
-<hr>
+[![Email](https://img.shields.io/badge/rizgarozan7%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:rizgarozan7@gmail.com)
+[![GitHub followers](https://img.shields.io/github/followers/RizgarOzan?style=flat-square&logo=github&label=Follow&color=181717)](https://github.com/RizgarOzan)
 
-<h3 align="left">Languages and Tools:</h3>
+</div>
 
-<h4>💻 Technologies I Use:</h4>
-<p align="left">
-  <a href="https://unity.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg" alt="unity" width="40" height="40"/>
-  </a>
-  <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/>
-  </a>
-  <a href="https://www.python.org" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/>
-  </a>
-</p>
+---
 
-<h4>🌱 Technologies I'm Learning:</h4>
-<p align="left">
-  <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/>
-  </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
-  </a>
-  <a href="https://isocpp.org/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/>
-  </a>
-  <a href="https://www.blender.org/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/blender/blender-original.svg" alt="blender" width="40" height="40"/>
-  </a>
-</p>
+### 🎮 About Me
 
-<hr>
+- Building **Suspicious Delicacies** — a Unity 2D game mixing restaurant management with turn-based RPG combat: procedural dish generation, elemental cooking reactions and a full customer service loop
+- Studying **Computer Education & Instructional Technology** at Hacettepe University — I care about the intersection of games and learning
+- Sharpening my fundamentals with [LeetCode](https://github.com/RizgarOzan/leetcode-solutions) and building my [portfolio website](https://github.com/RizgarOzan)
 
-<h3>📌 What I'm Working On</h3>
-<ul>
-  <li>🍜 <strong>Suspicious Delicacies</strong> — a Unity 2D prototype mixing restaurant management with turn-based RPG combat (procedural dish generation, elemental cooking reactions, customer service loop)</li>
-  <li>🌐 <a href="https://github.com/RizgarOzan/BTE311-Web-programlama">BTE311 Web Programming</a> — coursework on web fundamentals</li>
-  <li>🧩 <a href="https://github.com/RizgarOzan/leetcode-solutions">LeetCode Solutions</a> — algorithm & data structure practice</li>
-</ul>
+### 🛠️ Tech Stack
 
-<hr>
+**Game Development**
 
-<h3>📊 My GitHub Stats</h3>
-<p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=RizgarOzan&show_icons=true&theme=radical" alt="RizgarOzan's GitHub Stats" />
-  <br><br>
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=RizgarOzan&show_icons=true&layout=compact&theme=radical" alt="RizgarOzan's Top Languages" />
-</p>
+![Unity](https://img.shields.io/badge/Unity-100000?style=flat-square&logo=unity&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white)
+
+**Programming**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+
+**Currently Learning**
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Blender](https://img.shields.io/badge/Blender-E87D0D?style=flat-square&logo=blender&logoColor=white)
+
+### 📌 Current Focus
+
+| | Project | Status |
+|---|---------|--------|
+| 🍜 | **Suspicious Delicacies** — Unity 2D restaurant sim × RPG | In development |
+| 🧩 | [leetcode-solutions](https://github.com/RizgarOzan/leetcode-solutions) — DSA practice in Python & C# | Ongoing |
+| 🌐 | Personal portfolio website | In progress |
+| 📚 | [BTE311 Web Programming](https://github.com/RizgarOzan/BTE311-Web-programlama) — coursework | Done |
+
+### 📊 Stats
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=RizgarOzan&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="GitHub stats" height="165" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs?username=RizgarOzan&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" height="165" />
+
+<img src="https://streak-stats.demolab.com?user=RizgarOzan&theme=tokyonight&hide_border=true" alt="GitHub streak" />
+
+</div>
