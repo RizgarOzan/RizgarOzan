@@ -5,6 +5,8 @@
 **Game Developer in the making** · CEIT Student @ Hacettepe University
 
 [![Email](https://img.shields.io/badge/rizgarozan7%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:rizgarozan7@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rizgarozan/)
+[![Website](https://img.shields.io/badge/rizgarozan.github.io-D6C29A?style=flat-square&logo=googlechrome&logoColor=black)](https://rizgarozan.github.io)
 [![GitHub followers](https://img.shields.io/github/followers/RizgarOzan?style=flat-square&logo=github&label=Follow&color=181717)](https://github.com/RizgarOzan)
 
 </div>
@@ -15,7 +17,7 @@
 
 - Building **Suspicious Delicacies** — a Unity 2D game mixing restaurant management with turn-based RPG combat: procedural dish generation, elemental cooking reactions and a full customer service loop
 - Studying **Computer Education & Instructional Technology** at Hacettepe University — I care about the intersection of games and learning
-- Sharpening my fundamentals with [LeetCode](https://github.com/RizgarOzan/leetcode-solutions) and building my [portfolio website](https://github.com/RizgarOzan)
+- Sharpening my fundamentals with [LeetCode](https://github.com/RizgarOzan/leetcode-solutions) and my live [portfolio website](https://rizgarozan.github.io)
 
 ### 🛠️ Tech Stack
 
@@ -42,7 +44,7 @@
 |---|---------|--------|
 | 🍜 | **Suspicious Delicacies** — Unity 2D restaurant sim × RPG | In development |
 | 🧩 | [leetcode-solutions](https://github.com/RizgarOzan/leetcode-solutions) — DSA practice in Python & C# | Ongoing |
-| 🌐 | Personal portfolio website | In progress |
+| 🌐 | [rizgarozan.github.io](https://rizgarozan.github.io) — personal portfolio | Live |
 | 📚 | [BTE311 Web Programming](https://github.com/RizgarOzan/BTE311-Web-programlama) — coursework | Done |
 
 ### 📊 Activity
