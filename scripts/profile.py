@@ -1,6 +1,7 @@
 """Refresh assets/stats-{dark,light}.svg and the open-source table in README.md.
 
-Runs daily in .github/workflows/profile.yml. Locally:
+Runs daily in .github/workflows/profile.yml. The workflow's GITHUB_TOKEN only sees
+public contributions, hence the "public" label. Locally:
     GITHUB_TOKEN=$(gh auth token) python scripts/profile.py
 Standard library only.
 """
@@ -103,7 +104,7 @@ def card(t, metrics, weeks):
         f'letter-spacing="2.2">ACTIVITY</text>',
     ]
     for i, (name, value) in enumerate(metrics):
-        x, y = 64 + (i % 2) * 260, 142 + (i // 2) * 92
+        x, y = 64 + (i % 2) * 300, 142 + (i // 2) * 92
         parts.append(f'<text x="{x}" y="{y}" fill="{t["ink"]}" font-family="{SANS}" font-size="50" font-weight="300">{value:,}</text>')
         parts.append(label(t, x, y + 26, name))
     hx = W - 64 - (WEEKS * STEP - (STEP - CELL))
@@ -148,7 +149,7 @@ def main():
     calendar = data["user"]["contributionsCollection"]["contributionCalendar"]
     days = [d for w in calendar["weeks"] for d in w["contributionDays"]]
     metrics = [
-        ("CONTRIBUTIONS · 12 MONTHS", calendar["totalContributions"]),
+        ("PUBLIC CONTRIBUTIONS · 12 MONTHS", calendar["totalContributions"]),
         ("DAY STREAK", streak(days)),
         ("MERGED OPEN-SOURCE PRS", data["merged"]["issueCount"]),
         ("PRS IN REVIEW", data["open"]["issueCount"]),
