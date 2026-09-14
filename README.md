@@ -76,10 +76,15 @@ Pull requests to projects I don't own. Refreshed every day by
 [a workflow](.github/workflows/profile.yml).
 
 <!-- oss:start -->
-**2 in review**
+**7 in review**
 
 | | Pull request | Project |
 |---|---|---|
+| 🟢 in review | [Fix: C# project discovery ignores configured ignore patterns](https://github.com/oraios/serena/pull/2033) | [oraios/serena](https://github.com/oraios/serena) · ★ 29.3k |
+| 🟢 in review | [Fix implied second keyword for single-keyword position-area values](https://github.com/mdn/content/pull/45689) | [mdn/content](https://github.com/mdn/content) · ★ 11k |
+| 🟢 in review | [fix(docx): record Roman and ideographTraditional counts past their domain](https://github.com/HKUDS/LightRAG/pull/3940) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.6k |
+| 🟢 in review | [Node.js 24 supports SuppressedError](https://github.com/mdn/browser-compat-data/pull/30511) | [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) · ★ 5.7k |
+| 🟢 in review | [Hide the decorative dropdown trigger icon from screen readers](https://github.com/radzenhq/radzen-blazor/pull/2721) | [radzenhq/radzen-blazor](https://github.com/radzenhq/radzen-blazor) · ★ 4.3k |
 | 🟢 in review | [docs(reference): add unity_docs and unity_reflect examples](https://github.com/CoplayDev/unity-mcp/pull/1401) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.2k |
 | 🟢 in review | [docs(reference): add run_tests and get_test_job examples](https://github.com/CoplayDev/unity-mcp/pull/1400) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.2k |
 <!-- oss:end -->
