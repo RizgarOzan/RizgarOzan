@@ -16,56 +16,59 @@ instead of guess. Final-year Computer Education & Instructional Technology stude
 Hacettepe University, so I also care about the moment a game teaches something and the player
 doesn't notice.
 
-## Featured
+## Selected work
 
-<table>
-<tr>
-<td width="32%" valign="top">
-<a href="https://github.com/RizgarOzan/match3-lab"><img src="https://raw.githubusercontent.com/RizgarOzan/match3-lab/main/docs/media/level-05-hourglass.png" width="100%" alt="Match3 Lab: level 5 Hourglass, played by the bot in the WebGL build"></a>
-</td>
-<td valign="top">
+Five projects, in the order I'd show them to you. Every number on a card is copied from the
+project's own committed results.
 
-### [Match3 Lab](https://github.com/RizgarOzan/match3-lab)
-
-A match-3 **workbench**, not a match-3 game. An engine-independent C# rules core, a level
-format you can read in a diff, Unity level-editor windows, and a bot simulator that tells a
-designer how hard a level is before anyone plays it.
-
-- **12,000 bot games in about five seconds**, win rate per level with its standard error
-- Level Editor tunes a level's move budget to a target win-rate band in a couple of seconds
-- 39 core tests + 2 play-mode tests · WebGL build · every rule decision written down
-
-`C#` `Unity 6` `.NET` `xUnit`
-
-</td>
-</tr>
-</table>
+<a href="https://github.com/RizgarOzan/match3-lab">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-match3-lab-dark.svg">
+  <img src="assets/card-match3-lab-light.svg" width="100%" alt="01 Match3 Lab — C# match-3 rules core, readable level format, Unity editor tools and a bot simulator. Difficulty curve: greedy-bot win rate falls from 100% on level 1 to 50% on level 6; random bot from 70% to 3%. 1000 games per level.">
+</picture>
+</a>
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### [TMP Glyph Audit](https://github.com/RizgarOzan/tmp-glyph-audit)
-
-Finds every TextMeshPro text your fonts **cannot draw** — scenes, prefabs and runtime text
-files — through the same fallback chain TMP uses, before a player sees `□□□`. Editor window
-plus CI exit codes.
-
-`Unity package` `C#` `CI`
-
+<a href="https://github.com/RizgarOzan/tmp-glyph-audit">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-tmp-glyph-audit-dark.svg">
+  <img src="assets/card-tmp-glyph-audit-light.svg" width="100%" alt="02 TMP Glyph Audit — Unity package that finds every TextMeshPro text the fonts cannot draw, through TMP's real fallback chain. Editor window plus CI exit codes.">
+</picture>
+</a>
 </td>
 <td width="50%" valign="top">
-
-### [Turkish RAG Eval](https://github.com/RizgarOzan/turkish-rag-eval)
-
-Which parts of a RAG pipeline earn their cost in Turkish? 3 chunkers × 4 retrievers on a
-hand-labelled gold set. A 5-character prefix "stemmer" lifts BM25 nDCG@10 by 23–29%.
-
-`Python` `RAG` `IR evaluation`
-
+<a href="https://github.com/RizgarOzan/turkish-rag-eval">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-turkish-rag-eval-dark.svg">
+  <img src="assets/card-turkish-rag-eval-light.svg" width="100%" alt="03 Turkish RAG Eval — 3 chunkers × 4 retrievers on a hand-labelled Turkish gold set. Best nDCG@10 per retriever: BM25 0.41, BM25 with 5-character prefix 0.51, dense 0.50, hybrid RRF 0.61.">
+</picture>
+</a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://rizgarozan.itch.io/bilim-dedektifi">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-bilim-dedektifi-dark.svg">
+  <img src="assets/card-bilim-dedektifi-light.svg" width="100%" alt="04 Bilim Dedektifi — short educational mystery game, team course project at Hacettepe, free on itch.io.">
+</picture>
+</a>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/ilkhanarda/Code-Enigma">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-code-enigma-dark.svg">
+  <img src="assets/card-code-enigma-light.svg" width="100%" alt="05 Code-Enigma — React 19 academic progress platform built with İlkhan Arda Akmaca; I built the dashboard, peer comparison markers and the filter and settings controls.">
+</picture>
+</a>
 </td>
 </tr>
 </table>
+
+<sub>Match3 Lab ships a WebGL build, 39 core tests and 2 play-mode tests, and a decision record for every rule.
+TMP Glyph Audit: 18 xUnit + 4 EditMode tests. Turkish RAG Eval: 58 hand-labelled queries; differences under 0.05 nDCG are noise, and the README says so.</sub>
 
 ## Open source
 
@@ -83,9 +86,7 @@ Pull requests to projects I don't own. Refreshed every day by
 
 ## Also
 
-- **[Bilim Dedektifi](https://rizgarozan.itch.io/bilim-dedektifi)** — educational detective game, team course project, free on itch.io
 - **Suspicious Delicacies** — restaurant sim × turn-based RPG in Unity, three-person team; the restaurant loop, customer AI, QTE minigames and editor tooling are mine
-- **[Code-Enigma](https://github.com/ilkhanarda/Code-Enigma)** — React 19 academic-progress platform; I built the dashboard, peer markers and filters
 - **[leetcode-solutions](https://github.com/RizgarOzan/leetcode-solutions)** — data structures and algorithms in Python and C#, a few problems every day
 
 ## Toolbox
@@ -101,3 +102,5 @@ Pull requests to projects I don't own. Refreshed every day by
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
   <img src="assets/stats-light.svg" width="100%" alt="GitHub activity: merged open-source pull requests, pull requests in review, contributions in the last 12 months, current day streak, and a 26-week contribution heatmap">
 </picture>
+
+<sub>Header, cards and the activity card are SVGs rendered by <code>scripts/</code> in the site's palette; the cards' text is outlined so they look the same on every machine.</sub>
