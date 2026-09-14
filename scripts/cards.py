@@ -171,12 +171,12 @@ def card(t, n, first, last, lines, tags, picto, label):
 CARDS = {
     "match3-lab": hero,
     "tmp-glyph-audit": lambda t: card(
-        t, "02", "TMP Glyph ", "Audit",
+        t, "03", "TMP Glyph ", "Audit",
         ["Finds every TextMeshPro text your fonts cannot draw:", "scenes, prefabs and runtime text files, through TMP's", "real fallback chain. Editor window + CI exit codes."],
         "UNITY PACKAGE  ·  C#  ·  CI", glyph_tiles,
         "TMP Glyph Audit: Unity package that finds every TextMeshPro text the fonts cannot draw"),
     "turkish-rag-eval": lambda t: card(
-        t, "03", "Turkish ", "RAG Eval",
+        t, "02", "Turkish ", "RAG Eval",
         ["Which parts of a RAG pipeline earn their cost in", "Turkish? 3 chunkers × 4 retrievers on a hand-labelled", "gold set. A 5-char prefix stemmer lifts nDCG 23–29%."],
         "PYTHON  ·  RAG  ·  IR EVALUATION", bars,
         "Turkish RAG Eval: 12 retrieval configurations measured on a hand-labelled Turkish gold set"),
