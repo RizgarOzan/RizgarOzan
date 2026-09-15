@@ -92,10 +92,6 @@ Pull requests to projects I don't own. Refreshed every week by
 | 🟢 in review | [docs(reference): add unity_docs and unity_reflect examples](https://github.com/CoplayDev/unity-mcp/pull/1401) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.2k |
 <!-- oss:end -->
 
-## Also
-
-- **Suspicious Delicacies** — restaurant sim × turn-based RPG in Unity, three-person team; the restaurant loop, customer AI, QTE minigames and editor tooling are mine
-
 ## Toolbox
 
 ![Unity](https://img.shields.io/badge/Unity-121114?style=flat-square&logo=unity&logoColor=D6C29A)
