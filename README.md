@@ -76,20 +76,20 @@ Pull requests to projects I don't own. Refreshed every week by
 [a workflow](.github/workflows/profile.yml).
 
 <!-- oss:start -->
-**4 merged** across 3 projects · **7 in review**
+**11 merged** across 7 projects · **16 in review**
 
 | | Pull request | Project |
 |---|---|---|
+| 🟣 merged | [Fix compiled models with losses that require media counts in the trainer](https://github.com/huggingface/sentence-transformers/pull/4015) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.1k |
+| 🟣 merged | [fix: reopen existing NumpyCache without a -1 memmap shape](https://github.com/embeddings-benchmark/mteb/pull/5470) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [Create com.rizgarozan.tmp-glyph-audit.yml](https://github.com/openupm/openupm/pull/6927) | [openupm/openupm](https://github.com/openupm/openupm) · ★ 1.9k |
+| 🟣 merged | [IDBFactory.deleteDatabase(): result is undefined, not null](https://github.com/mdn/content/pull/45719) | [mdn/content](https://github.com/mdn/content) · ★ 11k |
+| 🟣 merged | [Node.js 24 supports SuppressedError](https://github.com/mdn/browser-compat-data/pull/30511) | [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) · ★ 5.7k |
+| 🟣 merged | [Skip the DataGrid re-render on keys it does not handle](https://github.com/radzenhq/radzen-blazor/pull/2724) | [radzenhq/radzen-blazor](https://github.com/radzenhq/radzen-blazor) · ★ 4.3k |
+| 🟣 merged | [fix(auth): strip whitespace around AUTH_ACCOUNTS entries](https://github.com/HKUDS/LightRAG/pull/3944) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.7k |
 | 🟣 merged | [Fix implied second keyword for single-keyword position-area values](https://github.com/mdn/content/pull/45689) | [mdn/content](https://github.com/mdn/content) · ★ 11k |
 | 🟣 merged | [Keep the DropZone can-drop class while dragging over its items](https://github.com/radzenhq/radzen-blazor/pull/2722) | [radzenhq/radzen-blazor](https://github.com/radzenhq/radzen-blazor) · ★ 4.3k |
-| 🟣 merged | [fix(docx): record Roman and ideographTraditional counts past their domain](https://github.com/HKUDS/LightRAG/pull/3940) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.6k |
-| 🟣 merged | [Hide the decorative dropdown trigger icon from screen readers](https://github.com/radzenhq/radzen-blazor/pull/2721) | [radzenhq/radzen-blazor](https://github.com/radzenhq/radzen-blazor) · ★ 4.3k |
-| 🟢 in review | [fix(auth): strip whitespace around AUTH_ACCOUNTS entries](https://github.com/HKUDS/LightRAG/pull/3944) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.6k |
-| 🟢 in review | [Fix compiled models with losses that require media counts in the trainer](https://github.com/huggingface/sentence-transformers/pull/4015) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.1k |
-| 🟢 in review | [Chrome 144 supports Temporal constructors](https://github.com/mdn/browser-compat-data/pull/30513) | [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) · ★ 5.7k |
-| 🟢 in review | [Fix: C# project discovery ignores configured ignore patterns](https://github.com/oraios/serena/pull/2033) | [oraios/serena](https://github.com/oraios/serena) · ★ 29.3k |
-| 🟢 in review | [Node.js 24 supports SuppressedError](https://github.com/mdn/browser-compat-data/pull/30511) | [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) · ★ 5.7k |
-| 🟢 in review | [docs(reference): add unity_docs and unity_reflect examples](https://github.com/CoplayDev/unity-mcp/pull/1401) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.2k |
+| 🟣 merged | [fix(docx): record Roman and ideographTraditional counts past their domain](https://github.com/HKUDS/LightRAG/pull/3940) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.7k |
 <!-- oss:end -->
 
 ## Toolbox
