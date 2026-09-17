@@ -11,6 +11,15 @@ import urllib.request
 from pathlib import Path
 
 LOGIN = "RizgarOzan"
+# The projects whose merges are worth a row of their own; everything else is counted.
+FEATURED = {
+    "embeddings-benchmark/mteb",
+    "huggingface/sentence-transformers",
+    "huggingface/datasets",
+    "HKUDS/LightRAG",
+    "CoplayDev/unity-mcp",
+    "openupm/openupm",
+}
 ROOT = Path(__file__).resolve().parent.parent
 PRS = f"author:{LOGIN} type:pr -user:{LOGIN}"
 PR_FIELDS = "... on PullRequest { title url createdAt mergedAt repository { nameWithOwner url stargazerCount } }"
@@ -49,6 +58,19 @@ def row(status, pr):
     return f"| {status} | [{title}]({pr['url']}) | [{repo['nameWithOwner']}]({repo['url']}) · ★ {stars(repo['stargazerCount'])} |"
 
 
+def featured(pr):
+    return pr["repository"]["nameWithOwner"] in FEATURED
+
+
+def rest_line(prs):
+    """One line for the merges that do not get a row, naming the projects they went to."""
+    if not prs:
+        return ""
+    owners = sorted({p["repository"]["nameWithOwner"].split("/")[0] for p in prs})
+    return (f"<sub>…and {len(prs)} more merged pull request{'s' * (len(prs) != 1)} to "
+            + ", ".join(owners) + ".</sub>")
+
+
 def oss_table(merged, open_):
     merged_prs = sorted(merged["nodes"], key=lambda p: p["mergedAt"], reverse=True)
     projects = len({p["repository"]["nameWithOwner"] for p in merged_prs})
@@ -56,10 +78,13 @@ def oss_table(merged, open_):
     if merged["issueCount"]:
         summary = (f"**{merged['issueCount']} merged** across {projects} project{'s' * (projects != 1)} · "
                    + summary)
-    rows = [row("🟣 merged", p) for p in merged_prs] + [row("🟢 in review", p) for p in open_["nodes"]]
+    rows = ([row("🟣 merged", p) for p in merged_prs if featured(p)]
+            + [row("🟢 in review", p) for p in open_["nodes"] if featured(p)])
+    tail = rest_line([p for p in merged_prs if not featured(p)])
     if not rows:
-        return summary
-    return "\n".join([summary, "", "| | Pull request | Project |", "|---|---|---|", *rows[:10]])
+        return "\n\n".join(part for part in [summary, tail] if part)
+    table = "\n".join(["| | Pull request | Project |", "|---|---|---|", *rows[:10]])
+    return "\n\n".join(part for part in [summary, table, tail] if part)
 
 
 def main():

@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img src="assets/header-light.svg" width="100%" alt="Rızgar Ozan — game and tools programmer. Systems behind games, and the tools that prove they work.">
+  <img src="assets/header-light.svg" width="100%" alt="Rızgar Ozan — AI systems and game tools programmer. I build measurement systems: retrieval evals, and game tools.">
 </picture>
 
 <p align="center">
@@ -10,31 +10,29 @@
   <a href="mailto:rizgarozan7@gmail.com"><img src="https://img.shields.io/badge/email-rizgarozan7%40gmail.com-D6C29A?style=flat-square&labelColor=121114" alt="Email"></a>
 </p>
 
-I build **systems and the tools around them**: rules engines you can test without an engine
-running, editors that show a designer what a change will cost, and simulators that measure
-instead of guess. Final-year Computer Education & Instructional Technology student at
-Hacettepe University, so I also care about the moment a game teaches something and the player
-doesn't notice.
+I build **measurement systems**: retrieval evaluations that say which part of a RAG pipeline
+earns its cost, and game tools that score a level or catch a broken font before anyone ships it.
+Final-year Computer Education & Instructional Technology student at Hacettepe University.
 
 ## Selected work
 
 Five projects, in the order I'd show them to you. Every number on a card is copied from the
 project's own committed results.
 
-<a href="https://github.com/RizgarOzan/match3-lab">
+<a href="https://github.com/RizgarOzan/turkish-rag-eval">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-match3-lab-dark.svg">
-  <img src="assets/card-match3-lab-light.svg" width="100%" alt="01 Match3 Lab — C# match-3 rules core, readable level format, Unity editor tools and a bot simulator. Difficulty curve: greedy-bot win rate falls from 100% on level 1 to 50% on level 6; random bot from 70% to 3%. 1000 games per level.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-turkish-rag-eval-dark.svg">
+  <img src="assets/card-turkish-rag-eval-light.svg" width="100%" alt="01 Turkish RAG Eval — 3 chunkers by 4 retrievers on a hand-labelled Turkish gold set. Best nDCG@10 per retriever: BM25 0.41, BM25 with 5-character prefix 0.51, dense 0.50, hybrid RRF 0.61.">
 </picture>
 </a>
 
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/RizgarOzan/turkish-rag-eval">
+<a href="https://github.com/RizgarOzan/match3-lab">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-turkish-rag-eval-dark.svg">
-  <img src="assets/card-turkish-rag-eval-light.svg" width="100%" alt="02 Turkish RAG Eval — 3 chunkers × 4 retrievers on a hand-labelled Turkish gold set. Best nDCG@10 per retriever: BM25 0.41, BM25 with 5-character prefix 0.51, dense 0.50, hybrid RRF 0.61.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-match3-lab-dark.svg">
+  <img src="assets/card-match3-lab-light.svg" width="100%" alt="02 Match3 Lab — C# match-3 rules core, readable level format, Unity editor tools and a bot simulator. The greedy bot's win rate falls from 100% on level 1 to 50% on level 6; the random bot from 70% to 3%. 1000 games per level.">
 </picture>
 </a>
 </td>
@@ -67,29 +65,31 @@ project's own committed results.
 </tr>
 </table>
 
-<sub>Match3 Lab ships a WebGL build, 39 core tests and 2 play-mode tests, and a decision record for every rule.
-Turkish RAG Eval: 58 hand-labelled queries; differences under 0.05 nDCG are noise, and the README says so. TMP Glyph Audit: 18 xUnit + 4 EditMode tests.</sub>
+<sub>Turkish RAG Eval: 58 hand-labelled queries; differences under 0.05 nDCG are noise, and the README says so.
+Match3 Lab <a href="https://rizgarozan.github.io/match3-lab/">plays in the browser</a> and ships 50 tests and a decision record for every rule. TMP Glyph Audit: 24 xUnit + 5 EditMode tests, <a href="https://openupm.com/packages/com.rizgarozan.tmp-glyph-audit/">on OpenUPM</a>.</sub>
 
 ## Open source
 
-Pull requests to projects I don't own. Refreshed every week by
-[a workflow](.github/workflows/profile.yml).
+Pull requests to projects I don't own — the AI and Unity ones listed below, the rest counted.
+Refreshed every week by [a workflow](.github/workflows/profile.yml).
 
 <!-- oss:start -->
-**11 merged** across 7 projects · **16 in review**
+**19 merged** across 7 projects · **17 in review**
 
 | | Pull request | Project |
 |---|---|---|
+| 🟣 merged | [fix(markdown): treat an escaped pipe as cell text, not a column separator](https://github.com/HKUDS/LightRAG/pull/3976) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.7k |
+| 🟣 merged | [fix(parser): emit LaTeX-valid delimiters for Word equations](https://github.com/HKUDS/LightRAG/pull/3977) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.7k |
+| 🟣 merged | [fix: pass the selected benchmarks in create-model-results](https://github.com/embeddings-benchmark/mteb/pull/5477) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [fix: apply the n_parameters lower bound when there is no upper bound](https://github.com/embeddings-benchmark/mteb/pull/5476) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
 | 🟣 merged | [Fix compiled models with losses that require media counts in the trainer](https://github.com/huggingface/sentence-transformers/pull/4015) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.1k |
 | 🟣 merged | [fix: reopen existing NumpyCache without a -1 memmap shape](https://github.com/embeddings-benchmark/mteb/pull/5470) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
 | 🟣 merged | [Create com.rizgarozan.tmp-glyph-audit.yml](https://github.com/openupm/openupm/pull/6927) | [openupm/openupm](https://github.com/openupm/openupm) · ★ 1.9k |
-| 🟣 merged | [IDBFactory.deleteDatabase(): result is undefined, not null](https://github.com/mdn/content/pull/45719) | [mdn/content](https://github.com/mdn/content) · ★ 11k |
-| 🟣 merged | [Node.js 24 supports SuppressedError](https://github.com/mdn/browser-compat-data/pull/30511) | [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) · ★ 5.7k |
-| 🟣 merged | [Skip the DataGrid re-render on keys it does not handle](https://github.com/radzenhq/radzen-blazor/pull/2724) | [radzenhq/radzen-blazor](https://github.com/radzenhq/radzen-blazor) · ★ 4.3k |
 | 🟣 merged | [fix(auth): strip whitespace around AUTH_ACCOUNTS entries](https://github.com/HKUDS/LightRAG/pull/3944) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.7k |
-| 🟣 merged | [Fix implied second keyword for single-keyword position-area values](https://github.com/mdn/content/pull/45689) | [mdn/content](https://github.com/mdn/content) · ★ 11k |
-| 🟣 merged | [Keep the DropZone can-drop class while dragging over its items](https://github.com/radzenhq/radzen-blazor/pull/2722) | [radzenhq/radzen-blazor](https://github.com/radzenhq/radzen-blazor) · ★ 4.3k |
 | 🟣 merged | [fix(docx): record Roman and ideographTraditional counts past their domain](https://github.com/HKUDS/LightRAG/pull/3940) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.7k |
+| 🟢 in review | [fix(parser): make filename-hint validation and classification agree](https://github.com/HKUDS/LightRAG/pull/3995) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.7k |
+
+<sub>…and 10 more merged pull requests to mdn, radzenhq.</sub>
 <!-- oss:end -->
 
 ## Toolbox

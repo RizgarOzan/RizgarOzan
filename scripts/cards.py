@@ -74,11 +74,12 @@ def curve(t, x0, y0, w, h):
             out += [f'<circle cx="{px:.1f}" cy="{py:.1f}" r="4" fill="{t["panel"]}" stroke="{color}" stroke-width="2"/>' for px, py in pts]
     for i in range(6):
         out.append(text(t, x0 + i * step, y0 + h + 20, f"0{i + 1}", 11, "muted", anchor="middle", family=MONO))
-    lx = x0
-    out.append(f'<line x1="{lx}" y1="{y0 + h + 44}" x2="{lx + 22}" y2="{y0 + h + 44}" stroke="{t["accent"]}" stroke-width="2.2"/>')
-    out.append(text(t, lx + 30, y0 + h + 48, "greedy bot", 12, "soft"))
-    out.append(f'<line x1="{lx + 120}" y1="{y0 + h + 44}" x2="{lx + 142}" y2="{y0 + h + 44}" stroke="{t["muted"]}" stroke-width="1.4" stroke-dasharray="4 5"/>')
-    out.append(text(t, lx + 150, y0 + h + 48, "random bot", 12, "soft"))
+    dx, dy = (0, 22) if w < 200 else (120, 0)
+    for i, (lab, color, dash) in enumerate([("greedy bot", t["accent"], ""), ("random bot", t["muted"], ' stroke-dasharray="4 5"')]):
+        lx, ly = x0 + i * dx, y0 + h + 44 + i * dy
+        width = 2.2 if not dash else 1.4
+        out.append(f'<line x1="{lx}" y1="{ly}" x2="{lx + 22}" y2="{ly}" stroke="{color}" stroke-width="{width}"{dash}/>')
+        out.append(text(t, lx + 30, ly + 4, lab, 12, "soft"))
     return "".join(out)
 
 
@@ -104,16 +105,16 @@ def glyph_tiles(t, x0, y0):
     return "".join(out)
 
 
-def bars(t, x0, y0):
+def bars(t, x0, y0, w=156):
     out = [text(t, x0, y0 - 14, "nDCG@10 BY RETRIEVER", 11, "muted", 600, spacing=1.6)]
     best = max(v for _, v in RAG)
     for i, (lab, v) in enumerate(RAG):
         y = y0 + i * 44
         strong = v == best
         out.append(text(t, x0, y + 12, lab, 12, "ink" if strong else "soft"))
-        out.append(f'<rect x="{x0}" y="{y + 20}" width="156" height="6" rx="3" fill="{t["hair"]}"/>')
-        out.append(f'<rect x="{x0}" y="{y + 20}" width="{156 * v / best:.1f}" height="6" rx="3" fill="{t["accent"]}" fill-opacity="{1 if strong else 0.45}"/>')
-        out.append(text(t, x0 + 156, y + 12, f"{v:.2f}", 12, "accent" if strong else "muted", anchor="end", family=MONO))
+        out.append(f'<rect x="{x0}" y="{y + 20}" width="{w}" height="6" rx="3" fill="{t["hair"]}"/>')
+        out.append(f'<rect x="{x0}" y="{y + 20}" width="{w * v / best:.1f}" height="6" rx="3" fill="{t["accent"]}" fill-opacity="{1 if strong else 0.45}"/>')
+        out.append(text(t, x0 + w, y + 12, f"{v:.2f}", 12, "accent" if strong else "muted", anchor="end", family=MONO))
     return "".join(out)
 
 
@@ -152,15 +153,15 @@ def hero(t):
     x = 40
     body = [
         numeral(t, x - 4, 152, "01", 140),
-        title(t, x, 184, "Match3 ", "Lab", 44),
-        text(t, x, 222, "A match-3 workbench, not a match-3 game: an engine-independent C# rules core, a level", 15),
-        text(t, x, 244, "format you can read in a diff, Unity editor windows, and a bot simulator that tells a designer", 15),
-        text(t, x, 266, "how hard a level is before anyone plays it. 12,000 games in about five seconds.", 15),
-        text(t, x, 296, "C#  ·  UNITY 6  ·  .NET  ·  xUNIT  ·  WEBGL", 11, "muted", 600, spacing=1.6),
+        title(t, x, 184, "Turkish ", "RAG Eval", 44),
+        text(t, x, 222, "Which parts of a retrieval pipeline actually earn their cost in Turkish? 3 chunkers × 4 retrievers,", 15),
+        text(t, x, 244, "12 configurations, measured on a hand-labelled gold set instead of argued about. A 5-character", 15),
+        text(t, x, 266, "prefix stemmer lifts nDCG@10 by 23–29%; dense retrieval never beats it alone.", 15),
+        text(t, x, 296, "PYTHON  ·  RAG  ·  IR EVALUATION  ·  BM25 / DENSE / RRF", 11, "muted", 600, spacing=1.6),
         f'<line x1="740" y1="40" x2="740" y2="280" stroke="{t["hair"]}"/>',
-        curve(t, 790, 66, 300, 140),
+        bars(t, 790, 78, 280),
     ]
-    return frame(t, w, h, "".join(body), "Match3 Lab: C# match-3 rules core, level format, editor tools and a bot simulator; difficulty curve measured with 1000 bot games per level")
+    return frame(t, w, h, "".join(body), "Turkish RAG Eval: 3 chunkers by 4 retrievers on a hand-labelled Turkish gold set; best nDCG@10 per retriever — BM25 0.41, BM25 with 5-character prefix 0.51, dense 0.50, hybrid RRF 0.61")
 
 
 def card(t, n, first, last, lines, tags, picto, label):
@@ -169,17 +170,17 @@ def card(t, n, first, last, lines, tags, picto, label):
 
 
 CARDS = {
-    "match3-lab": hero,
+    "turkish-rag-eval": hero,
+    "match3-lab": lambda t: card(
+        t, "02", "Match3 ", "Lab",
+        ["A match-3 workbench, not a match-3 game: an engine-", "independent C# rules core, a level format you can read in", "a diff, and a bot that scores a level before anyone plays it."],
+        "C#  ·  UNITY 6  ·  xUNIT  ·  WEBGL", lambda t, x, y: curve(t, x, y + 14, 120, 92),
+        "Match3 Lab: C# match-3 rules core, level format, Unity editor tools and a bot simulator; the greedy bot's win rate falls from 100% on level 1 to 50% on level 6"),
     "tmp-glyph-audit": lambda t: card(
         t, "03", "TMP Glyph ", "Audit",
         ["Finds every TextMeshPro text your fonts cannot draw:", "scenes, prefabs and runtime text files, through TMP's", "real fallback chain. Editor window + CI exit codes."],
         "UNITY PACKAGE  ·  C#  ·  CI", glyph_tiles,
         "TMP Glyph Audit: Unity package that finds every TextMeshPro text the fonts cannot draw"),
-    "turkish-rag-eval": lambda t: card(
-        t, "02", "Turkish ", "RAG Eval",
-        ["Which parts of a RAG pipeline earn their cost in", "Turkish? 3 chunkers × 4 retrievers on a hand-labelled", "gold set. A 5-char prefix stemmer lifts nDCG 23–29%."],
-        "PYTHON  ·  RAG  ·  IR EVALUATION", bars,
-        "Turkish RAG Eval: 12 retrieval configurations measured on a hand-labelled Turkish gold set"),
     "bilim-dedektifi": lambda t: card(
         t, "04", "Bilim ", "Dedektifi",
         ["A short educational mystery told through a detective", "investigating a suspicious death. Team course", "project at Hacettepe; free on itch.io."],
