@@ -60,7 +60,8 @@ def card_body(t, n, first, last, lines, tags, w):
 
 def curve(t, x0, y0, w, h):
     """Greedy vs random win rate over six levels."""
-    out = [text(t, x0, y0 - 18, "DIFFICULTY CURVE · 1000 BOT GAMES PER LEVEL", 11, "muted", 600, spacing=1.6)]
+    label = "DIFFICULTY CURVE" if w < 200 else "DIFFICULTY CURVE · 1000 BOT GAMES PER LEVEL"
+    out = [text(t, x0, y0 - 18, label, 11, "muted", 600, spacing=1.6)]
     for frac, lab in [(0, "100%"), (0.5, "50%"), (1, "0%")]:
         y = y0 + frac * h
         out.append(f'<line x1="{x0}" y1="{y:.1f}" x2="{x0 + w}" y2="{y:.1f}" stroke="{t["hair"]}"/>')
@@ -173,7 +174,7 @@ CARDS = {
     "turkish-rag-eval": hero,
     "match3-lab": lambda t: card(
         t, "02", "Match3 ", "Lab",
-        ["A match-3 workbench, not a match-3 game: an engine-", "independent C# rules core, a level format you can read in", "a diff, and a bot that scores a level before anyone plays it."],
+        ["A match-3 workbench, not a match-3 game: an engine-", "independent C# rules core, a level format you can read in", "a diff, and a bot that ranks a level over 1000 games."],
         "C#  ·  UNITY 6  ·  xUNIT  ·  WEBGL", lambda t, x, y: curve(t, x, y + 14, 120, 92),
         "Match3 Lab: C# match-3 rules core, level format, Unity editor tools and a bot simulator; the greedy bot's win rate falls from 100% on level 1 to 50% on level 6"),
     "tmp-glyph-audit": lambda t: card(
