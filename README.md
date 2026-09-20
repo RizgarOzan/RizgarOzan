@@ -74,22 +74,22 @@ Pull requests to projects I don't own — the AI and Unity ones listed below, th
 Refreshed every week by [a workflow](.github/workflows/profile.yml).
 
 <!-- oss:start -->
-**19 merged** across 7 projects · **17 in review**
+**28 merged** across 9 projects · **21 in review**
 
 | | Pull request | Project |
 |---|---|---|
-| 🟣 merged | [fix(markdown): treat an escaped pipe as cell text, not a column separator](https://github.com/HKUDS/LightRAG/pull/3976) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.7k |
-| 🟣 merged | [fix(parser): emit LaTeX-valid delimiters for Word equations](https://github.com/HKUDS/LightRAG/pull/3977) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.7k |
-| 🟣 merged | [fix: pass the selected benchmarks in create-model-results](https://github.com/embeddings-benchmark/mteb/pull/5477) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [fix: apply the n_parameters lower bound when there is no upper bound](https://github.com/embeddings-benchmark/mteb/pull/5476) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [Fix compiled models with losses that require media counts in the trainer](https://github.com/huggingface/sentence-transformers/pull/4015) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.1k |
-| 🟣 merged | [fix: reopen existing NumpyCache without a -1 memmap shape](https://github.com/embeddings-benchmark/mteb/pull/5470) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [Create com.rizgarozan.tmp-glyph-audit.yml](https://github.com/openupm/openupm/pull/6927) | [openupm/openupm](https://github.com/openupm/openupm) · ★ 1.9k |
-| 🟣 merged | [fix(auth): strip whitespace around AUTH_ACCOUNTS entries](https://github.com/HKUDS/LightRAG/pull/3944) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.7k |
-| 🟣 merged | [fix(docx): record Roman and ideographTraditional counts past their domain](https://github.com/HKUDS/LightRAG/pull/3940) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.7k |
-| 🟢 in review | [fix(parser): make filename-hint validation and classification agree](https://github.com/HKUDS/LightRAG/pull/3995) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.7k |
+| 🟣 merged | [fix: warm the benchmark-schema cache key the route actually uses](https://github.com/embeddings-benchmark/mteb/pull/5494) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [docs(skill): say where to look when a tool is not in the tool list](https://github.com/CoplayDev/unity-mcp/pull/1406) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.4k |
+| 🟣 merged | [fix: pass num_proc to every dataloader created during evaluation](https://github.com/embeddings-benchmark/mteb/pull/5489) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [fix: apply scripts filter in TaskResult.get_score](https://github.com/embeddings-benchmark/mteb/pull/5490) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [fix: accept ISO 639-3 codes in get_model_metas(languages=...)](https://github.com/embeddings-benchmark/mteb/pull/5484) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [fix: accept language-script and programming-language codes in filter_tasks](https://github.com/embeddings-benchmark/mteb/pull/5483) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [fix: allow validate_and_filter in load_results without tasks](https://github.com/embeddings-benchmark/mteb/pull/5480) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [fix: do not mutate eval_splits in calculate_descriptive_statistics](https://github.com/embeddings-benchmark/mteb/pull/5481) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [fix(markdown): treat an escaped pipe as cell text, not a column separator](https://github.com/HKUDS/LightRAG/pull/3976) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.8k |
+| 🟣 merged | [fix(parser): emit LaTeX-valid delimiters for Word equations](https://github.com/HKUDS/LightRAG/pull/3977) | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) · ★ 39.8k |
 
-<sub>…and 10 more merged pull requests to mdn, radzenhq.</sub>
+<sub>…and 11 more merged pull requests to TheAlgorithms, mdn, radzenhq.</sub>
 <!-- oss:end -->
 
 ## Toolbox
