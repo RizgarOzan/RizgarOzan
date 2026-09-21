@@ -7,6 +7,7 @@
   <a href="https://rizgarozan.github.io"><img src="https://img.shields.io/badge/website-rizgarozan.github.io-D6C29A?style=flat-square&labelColor=121114" alt="Website"></a>
   <a href="https://www.linkedin.com/in/rizgarozan/"><img src="https://img.shields.io/badge/linkedin-rizgarozan-D6C29A?style=flat-square&labelColor=121114" alt="LinkedIn"></a>
   <a href="https://rizgarozan.itch.io"><img src="https://img.shields.io/badge/itch.io-rizgarozan-D6C29A?style=flat-square&labelColor=121114" alt="itch.io"></a>
+  <a href="https://huggingface.co/RizgarOzan"><img src="https://img.shields.io/badge/hugging%20face-RizgarOzan-D6C29A?style=flat-square&labelColor=121114" alt="Hugging Face"></a>
   <a href="mailto:rizgarozan7@gmail.com"><img src="https://img.shields.io/badge/email-rizgarozan7%40gmail.com-D6C29A?style=flat-square&labelColor=121114" alt="Email"></a>
 </p>
 
@@ -65,7 +66,7 @@ project's own committed results.
 </tr>
 </table>
 
-<sub>Turkish RAG Eval: 58 hand-labelled queries; differences under 0.05 nDCG are noise, and the README says so.
+<sub>Turkish RAG Eval: 58 hand-labelled queries, <a href="https://huggingface.co/datasets/RizgarOzan/turkish-rag-eval">published as a dataset on Hugging Face</a>; differences under 0.05 nDCG are noise, and the README says so.
 Match3 Lab <a href="https://rizgarozan.github.io/match3-lab/">plays in the browser</a> and ships 50 tests and a decision record for every rule. TMP Glyph Audit: 24 xUnit + 5 EditMode tests, <a href="https://openupm.com/packages/com.rizgarozan.tmp-glyph-audit/">on OpenUPM</a>.</sub>
 
 ## Open source
