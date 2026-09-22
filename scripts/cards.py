@@ -18,8 +18,14 @@ MONO = "Consolas,'SF Mono',Menlo,monospace"
 # match3-lab docs/curve-1000.csv — win rate per level, 1000 games per bot
 GREEDY = [1.000, 0.980, 0.908, 0.800, 0.597, 0.497]
 RANDOM = [0.701, 0.167, 0.273, 0.297, 0.091, 0.031]
-# turkish-rag-eval results/summary.json — best nDCG@10 per retriever across chunkers
-RAG = [("BM25", 0.410), ("BM25 + 5-char prefix", 0.510), ("dense", 0.501), ("hybrid RRF", 0.607)]
+# turkish-rag-eval results/summary.json and results/models/*/summary.json —
+# best nDCG@10 across chunkers; the two dense rows are the default multilingual
+# model and the best of the five measured models (newmindai/Mursit-Large-TR-Retrieval)
+RAG = [("BM25", 0.410), ("BM25 + 5-char prefix", 0.510), ("hybrid RRF", 0.613),
+       ("dense (multilingual)", 0.501), ("dense (Turkish model)", 0.781)]
+
+
+RAG_LABEL = ", ".join(f"{lab} {v:.2f}" for lab, v in RAG)
 
 
 def text(t, x, y, s, size=14, fill="soft", weight=400, anchor="start", spacing=0, family=SANS):
@@ -110,7 +116,7 @@ def bars(t, x0, y0, w=156):
     out = [text(t, x0, y0 - 14, "nDCG@10 BY RETRIEVER", 11, "muted", 600, spacing=1.6)]
     best = max(v for _, v in RAG)
     for i, (lab, v) in enumerate(RAG):
-        y = y0 + i * 44
+        y = y0 + i * 42
         strong = v == best
         out.append(text(t, x0, y + 12, lab, 12, "ink" if strong else "soft"))
         out.append(f'<rect x="{x0}" y="{y + 20}" width="{w}" height="6" rx="3" fill="{t["hair"]}"/>')
@@ -157,12 +163,13 @@ def hero(t):
         title(t, x, 184, "Turkish ", "RAG Eval", 44),
         text(t, x, 222, "Which parts of a retrieval pipeline actually earn their cost in Turkish? 3 chunkers × 4 retrievers,", 15),
         text(t, x, 244, "12 configurations, measured on a hand-labelled gold set instead of argued about. A 5-character", 15),
-        text(t, x, 266, "prefix stemmer lifts nDCG@10 by 23–29%; dense retrieval never beats it alone.", 15),
+        text(t, x, 266, "prefix stemmer lifts BM25 by 23–29%, and the only dense model that beats it is trained for Turkish.", 15),
         text(t, x, 296, "PYTHON  ·  RAG  ·  IR EVALUATION  ·  BM25 / DENSE / RRF", 11, "muted", 600, spacing=1.6),
         f'<line x1="740" y1="40" x2="740" y2="280" stroke="{t["hair"]}"/>',
-        bars(t, 790, 78, 280),
+        bars(t, 790, 70, 280),
     ]
-    return frame(t, w, h, "".join(body), "Turkish RAG Eval: 3 chunkers by 4 retrievers on a hand-labelled Turkish gold set; best nDCG@10 per retriever — BM25 0.41, BM25 with 5-character prefix 0.51, dense 0.50, hybrid RRF 0.61")
+    return frame(t, w, h, "".join(body), "Turkish RAG Eval: 3 chunkers by 4 retrievers on a hand-labelled Turkish gold set; "
+                 "best nDCG@10 per retriever — " + RAG_LABEL)
 
 
 def card(t, n, first, last, lines, tags, picto, label):
