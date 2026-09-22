@@ -1,5 +1,11 @@
-"""Checks for the open-source section builder:  python scripts/test_profile.py"""
+"""Checks for the profile builders:  python scripts/test_profile.py"""
+from pathlib import Path
+
+import cards
 import profile as p
+from palette import THEMES
+
+ROOT = Path(__file__).resolve().parent.parent
 
 
 def pr(repo, number, merged="2026-09-01T00:00:00Z", stars=1000):
@@ -19,7 +25,22 @@ MERGED = [
 OPEN = [pr("huggingface/sentence-transformers", 6)]
 
 
+def check_hero_numbers():
+    """The hero card's numbers are drawn once and quoted twice — keep the three in step."""
+    svg = cards.hero(THEMES["light"])
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    for lab, v in cards.RAG:
+        assert f">{v:.2f}<" in svg, lab                 # drawn at the end of its bar
+        assert f"{lab} {v:.2f}" in svg, lab             # named in the aria label
+        assert f"{lab} {v:.2f}" in readme, lab          # and in the README alt text
+
+    # the card's copy says a Turkish retrieval model is the only dense winner
+    assert max(cards.RAG, key=lambda r: r[1])[0].startswith("dense"), cards.RAG
+
+
 def main():
+    check_hero_numbers()
+
     out = p.oss_table({"issueCount": 5, "nodes": MERGED}, {"issueCount": 1, "nodes": OPEN})
 
     # only the featured repos get a row of their own, newest merge first

@@ -23,7 +23,7 @@ project's own committed results.
 <a href="https://github.com/RizgarOzan/turkish-rag-eval">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-turkish-rag-eval-dark.svg">
-  <img src="assets/card-turkish-rag-eval-light.svg" width="100%" alt="01 Turkish RAG Eval — 3 chunkers by 4 retrievers on a hand-labelled Turkish gold set. Best nDCG@10 per retriever: BM25 0.41, BM25 with 5-character prefix 0.51, dense 0.50, hybrid RRF 0.61.">
+  <img src="assets/card-turkish-rag-eval-light.svg" width="100%" alt="01 Turkish RAG Eval — 3 chunkers by 4 retrievers on a hand-labelled Turkish gold set. Best nDCG@10 per retriever: BM25 0.41, BM25 + 5-char prefix 0.51, hybrid RRF 0.61, dense (multilingual) 0.50, dense (Turkish model) 0.78.">
 </picture>
 </a>
 
