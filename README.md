@@ -75,22 +75,22 @@ Pull requests to projects I don't own — the AI and Unity ones listed below, th
 Refreshed every week by [a workflow](.github/workflows/profile.yml).
 
 <!-- oss:start -->
-**36 merged** across 11 projects · **23 in review**
+**53 merged** across 14 projects · **21 in review**
 
 | | Pull request | Project |
 |---|---|---|
+| 🟣 merged | [docs(reference): add unity_docs and unity_reflect examples](https://github.com/CoplayDev/unity-mcp/pull/1401) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.5k |
+| 🟣 merged | [fix: don't place pair classification thresholds between tied scores](https://github.com/embeddings-benchmark/mteb/pull/5465) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
 | 🟣 merged | [fix: keep the benchmark when filtering BenchmarkResults by model](https://github.com/embeddings-benchmark/mteb/pull/5507) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
 | 🟣 merged | [fix(cde): pass the prompt text, not its name, to the model](https://github.com/embeddings-benchmark/mteb/pull/5503) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
 | 🟣 merged | [fix: warm the benchmark-schema cache key the route actually uses](https://github.com/embeddings-benchmark/mteb/pull/5494) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [docs(skill): say where to look when a tool is not in the tool list](https://github.com/CoplayDev/unity-mcp/pull/1406) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.4k |
+| 🟣 merged | [docs(skill): say where to look when a tool is not in the tool list](https://github.com/CoplayDev/unity-mcp/pull/1406) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.5k |
 | 🟣 merged | [fix: pass num_proc to every dataloader created during evaluation](https://github.com/embeddings-benchmark/mteb/pull/5489) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
 | 🟣 merged | [fix: apply scripts filter in TaskResult.get_score](https://github.com/embeddings-benchmark/mteb/pull/5490) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
 | 🟣 merged | [fix: accept ISO 639-3 codes in get_model_metas(languages=...)](https://github.com/embeddings-benchmark/mteb/pull/5484) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
 | 🟣 merged | [fix: accept language-script and programming-language codes in filter_tasks](https://github.com/embeddings-benchmark/mteb/pull/5483) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [fix: allow validate_and_filter in load_results without tasks](https://github.com/embeddings-benchmark/mteb/pull/5480) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [fix: do not mutate eval_splits in calculate_descriptive_statistics](https://github.com/embeddings-benchmark/mteb/pull/5481) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
 
-<sub>…and 17 more merged pull requests to TheAlgorithms, docling-project, kornia, mdn, radzenhq.</sub>
+<sub>…and 32 more merged pull requests to ManimCommunity, TheAlgorithms, docling-project, embeddings-benchmark, kornia, mdn, pylint-dev, radzenhq.</sub>
 <!-- oss:end -->
 
 ## Toolbox
