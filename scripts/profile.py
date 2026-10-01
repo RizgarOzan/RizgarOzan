@@ -17,6 +17,8 @@ FEATURED = {
     "huggingface/sentence-transformers",
     "huggingface/datasets",
     "HKUDS/LightRAG",
+    "kornia/kornia",
+    "docling-project/docling",
     "CoplayDev/unity-mcp",
     "openupm/openupm",
 }
@@ -71,31 +73,63 @@ def rest_line(prs):
             + ", ".join(owners) + ".</sub>")
 
 
+def oss_summary(merged, open_):
+    """The one-line proof under the intro: totals, and the featured projects with the most merges."""
+    merged_prs = merged["nodes"]
+    projects = len({p["repository"]["nameWithOwner"] for p in merged_prs})
+    counts = {}
+    for p in merged_prs:
+        if featured(p):
+            name = p["repository"]["nameWithOwner"].split("/")[1]
+            counts[name] = counts.get(name, 0) + 1
+    named = [name for name, _ in sorted(counts.items(), key=lambda kv: -kv[1])[:4]]
+    among = ""
+    if len(named) > 1:
+        among = f" — {', '.join(named[:-1])} and {named[-1]} among them —"
+    elif named:
+        among = f" — {named[0]} among them —"
+    return (f"**{merged['issueCount']} pull requests merged** into {projects} "
+            f"project{'s' * (projects != 1)} I don't own{among} with {open_['issueCount']} more in review.")
+
+
+PER_PROJECT = 3  # rows one project may take, so a busy week in one repo doesn't hide the others
+
+
+def spread(prs):
+    seen, out = {}, []
+    for p in prs:
+        name = p["repository"]["nameWithOwner"]
+        if featured(p) and seen.get(name, 0) < PER_PROJECT:
+            seen[name] = seen.get(name, 0) + 1
+            out.append(p)
+    return out
+
+
 def oss_table(merged, open_):
     merged_prs = sorted(merged["nodes"], key=lambda p: p["mergedAt"], reverse=True)
-    projects = len({p["repository"]["nameWithOwner"] for p in merged_prs})
-    summary = f"**{open_['issueCount']} in review**"
-    if merged["issueCount"]:
-        summary = (f"**{merged['issueCount']} merged** across {projects} project{'s' * (projects != 1)} · "
-                   + summary)
-    rows = ([row("🟣 merged", p) for p in merged_prs if featured(p)]
-            + [row("🟢 in review", p) for p in open_["nodes"] if featured(p)])
+    rows = ([row("🟣 merged", p) for p in spread(merged_prs)]
+            + [row("🟢 in review", p) for p in spread(open_["nodes"])])
     tail = rest_line([p for p in merged_prs if not featured(p)])
     if not rows:
-        return "\n\n".join(part for part in [summary, tail] if part)
+        return tail
     table = "\n".join(["| | Pull request | Project |", "|---|---|---|", *rows[:10]])
-    return "\n\n".join(part for part in [summary, table, tail] if part)
+    return "\n\n".join(part for part in [table, tail] if part)
+
+
+def replace_between(text, name, body):
+    return re.sub(rf"(<!-- {name}:start -->).*?(<!-- {name}:end -->)",
+                  lambda m: f"{m.group(1)}\n{body}\n{m.group(2)}", text, flags=re.S)
 
 
 def main():
     data = fetch()
     readme = ROOT / "README.md"
     text = readme.read_text(encoding="utf-8")
-    table = oss_table(data["merged"], data["open"])
-    text = re.sub(r"(<!-- oss:start -->).*?(<!-- oss:end -->)",
-                  lambda m: f"{m.group(1)}\n{table}\n{m.group(2)}", text, flags=re.S)
+    summary = oss_summary(data["merged"], data["open"])
+    text = replace_between(text, "summary", summary)
+    text = replace_between(text, "oss", oss_table(data["merged"], data["open"]))
     readme.write_text(text, encoding="utf-8")
-    print(table.splitlines()[0])
+    print(summary)
 
 
 if __name__ == "__main__":

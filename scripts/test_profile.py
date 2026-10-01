@@ -41,7 +41,8 @@ def check_hero_numbers():
 def main():
     check_hero_numbers()
 
-    out = p.oss_table({"issueCount": 5, "nodes": MERGED}, {"issueCount": 1, "nodes": OPEN})
+    merged, open_ = {"issueCount": 5, "nodes": MERGED}, {"issueCount": 1, "nodes": OPEN}
+    out = p.oss_table(merged, open_)
 
     # only the featured repos get a row of their own, newest merge first
     assert out.count("| 🟣 merged |") == 2, out
@@ -54,14 +55,30 @@ def main():
     for owner in ("mdn", "radzenhq"):
         assert owner in out.rsplit("\n", 1)[-1], out
 
-    # summary still reports the true totals
-    assert "**5 merged**" in out and "**1 in review**" in out, out
+    # one project cannot take the whole table: the 4th kornia merge yields to the older LightRAG one
+    busy = [pr("kornia/kornia", n, f"2026-09-{10 + n:02d}T00:00:00Z") for n in range(1, 5)] + MERGED
+    spread = p.oss_table({"issueCount": 9, "nodes": busy}, {"issueCount": 0, "nodes": []})
+    assert spread.count("kornia/kornia/pull") == p.PER_PROJECT, spread
+    assert "LightRAG" in spread and "mteb" in spread, spread
 
-    # no featured merges at all: no table, just the tail line
+    # the proof line reports the true totals and names the featured projects, busiest first
+    summary = p.oss_summary(merged, open_)
+    assert summary.startswith("**5 pull requests merged** into 5 projects I don't own"), summary
+    assert "mteb and LightRAG among them" in summary and "1 more in review" in summary, summary
+    assert "mdn" not in summary, summary
+
+    # no featured merges at all: no table, just the tail line; the proof line has no "among them"
     only_rest = p.oss_table({"issueCount": 1, "nodes": [pr("mdn/content", 3)]},
                             {"issueCount": 0, "nodes": []})
     assert "| Pull request |" not in only_rest, only_rest
     assert "1 more merged pull request" in only_rest, only_rest
+    assert "among" not in p.oss_summary({"issueCount": 1, "nodes": [pr("mdn/content", 3)]},
+                                        {"issueCount": 0, "nodes": []})
+
+    # both marker blocks in the README are present exactly once, so the Action can fill them
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    for name in ("summary", "oss"):
+        assert readme.count(f"<!-- {name}:start -->") == 1 and readme.count(f"<!-- {name}:end -->") == 1, name
 
     print("ok")
 
