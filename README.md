@@ -17,9 +17,6 @@ Final-year Computer Education & Instructional Technology student at Hacettepe Un
 
 ## Selected work
 
-Five projects, in the order I'd show them to you. Every number on a card is copied from the
-project's own committed results.
-
 <a href="https://github.com/RizgarOzan/turkish-rag-eval">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-turkish-rag-eval-dark.svg">
@@ -66,13 +63,9 @@ project's own committed results.
 </tr>
 </table>
 
-<sub>Turkish RAG Eval: 58 hand-labelled queries, <a href="https://huggingface.co/datasets/RizgarOzan/turkish-rag-eval">published as a dataset on Hugging Face</a>; differences under 0.05 nDCG are noise, and the README says so.
-Match3 Lab <a href="https://rizgarozan.github.io/match3-lab/">plays in the browser</a> and ships 50 tests and a decision record for every rule. TMP Glyph Audit: 24 xUnit + 5 EditMode tests, <a href="https://openupm.com/packages/com.rizgarozan.tmp-glyph-audit/">on OpenUPM</a>.</sub>
-
 ## Open source
 
-Fixes sent back to the retrieval and Unity tooling I use. The AI and Unity projects get a row each,
-the rest are counted; [a workflow](.github/workflows/profile.yml) refreshes this every week.
+Fixes sent back to the retrieval and Unity tooling I use, refreshed weekly by [a workflow](.github/workflows/profile.yml).
 
 <!-- oss:start -->
 | | Pull request | Project |
@@ -82,11 +75,6 @@ the rest are counted; [a workflow](.github/workflows/profile.yml) refreshes this
 | 🟣 merged | [fix: read task modalities in result filtering](https://github.com/embeddings-benchmark/mteb/pull/5550) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
 | 🟣 merged | [docs(reference): add unity_docs and unity_reflect examples](https://github.com/CoplayDev/unity-mcp/pull/1401) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.6k |
 | 🟣 merged | [fix(augmentation): place RandomGaussianIllumination's peak at center * L - 0.5](https://github.com/kornia/kornia/pull/4990) | [kornia/kornia](https://github.com/kornia/kornia) · ★ 11.4k |
-| 🟣 merged | [docs(geometry): list the scaled large-root quartic defect (#4954) and pin it](https://github.com/kornia/kornia/pull/4989) | [kornia/kornia](https://github.com/kornia/kornia) · ★ 11.4k |
-| 🟣 merged | [fix(geometry): make solve_quartic's cubic fallback tolerance relative to the row](https://github.com/kornia/kornia/pull/4921) | [kornia/kornia](https://github.com/kornia/kornia) · ★ 11.4k |
-| 🟣 merged | [fix: don't place pair classification thresholds between tied scores](https://github.com/embeddings-benchmark/mteb/pull/5465) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [fix(ebcdic): keep fixed-point notation for scaled numbers](https://github.com/docling-project/docling/pull/4296) | [docling-project/docling](https://github.com/docling-project/docling) · ★ 68.3k |
-| 🟣 merged | [fix(afp): follow PTOCA control sequence chaining](https://github.com/docling-project/docling/pull/4297) | [docling-project/docling](https://github.com/docling-project/docling) · ★ 68.3k |
 
 <sub>…and 22 more merged pull requests to Effect-TS, ManimCommunity, TheAlgorithms, e18e, embeddings-benchmark, mdn, modelscope, pylint-dev, radzenhq.</sub>
 <!-- oss:end -->
@@ -94,7 +82,4 @@ the rest are counted; [a workflow](.github/workflows/profile.yml) refreshes this
 ## Now · October 2026
 
 - Turkish RAG Eval is at 300 queries (58 hand-labelled, 242 LLM-drafted and double-labelled) across five models, with the dataset on Hugging Face; next is human review of the drafts and an MTEB task.
-- A few pull requests a day to the retrieval and Unity tooling in the table above.
 - Graduating in June 2027; open to internships and new-grad roles in applied AI and game engineering.
-
-<sub>Header and cards are SVGs rendered by <code>scripts/</code> in the site's palette; the cards' text is outlined so they look the same on every machine.</sub>

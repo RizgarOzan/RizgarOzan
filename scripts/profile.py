@@ -112,7 +112,7 @@ def oss_table(merged, open_):
     tail = rest_line([p for p in merged_prs if not featured(p)])
     if not rows:
         return tail
-    table = "\n".join(["| | Pull request | Project |", "|---|---|---|", *rows[:10]])
+    table = "\n".join(["| | Pull request | Project |", "|---|---|---|", *rows[:5]])
     return "\n\n".join(part for part in [table, tail] if part)
 
 
