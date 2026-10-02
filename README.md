@@ -93,7 +93,7 @@ the rest are counted; [a workflow](.github/workflows/profile.yml) refreshes this
 
 ## Now · October 2026
 
-- Growing Turkish RAG Eval from 58 hand-labelled queries to a 300-query, six-model benchmark, with the dataset on Hugging Face.
+- Turkish RAG Eval is at 300 queries (58 hand-labelled, 242 LLM-drafted and double-labelled) across five models, with the dataset on Hugging Face; next is human review of the drafts and an MTEB task.
 - A few pull requests a day to the retrieval and Unity tooling in the table above.
 - Graduating in June 2027; open to internships and new-grad roles in applied AI and game engineering.
 
