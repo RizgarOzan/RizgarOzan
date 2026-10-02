@@ -163,7 +163,7 @@ def hero(t):
         title(t, x, 184, "Turkish ", "RAG Eval", 44),
         text(t, x, 222, "Which parts of a retrieval pipeline actually earn their cost in Turkish? 3 chunkers × 4 retrievers,", 15),
         text(t, x, 244, "12 configurations, measured on a hand-labelled gold set instead of argued about. A 5-character", 15),
-        text(t, x, 266, "prefix stemmer lifts BM25 by 23–29%, and the only dense model that beats it is trained for Turkish.", 15),
+        text(t, x, 266, "prefix stemmer lifts BM25 by 23–29%, and only dense models trained for retrieval beat it.", 15),
         text(t, x, 296, "PYTHON  ·  RAG  ·  IR EVALUATION  ·  BM25 / DENSE / RRF", 11, "muted", 600, spacing=1.6),
         f'<line x1="740" y1="40" x2="740" y2="280" stroke="{t["hair"]}"/>',
         bars(t, 790, 70, 280),

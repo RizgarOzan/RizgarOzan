@@ -34,8 +34,13 @@ def check_hero_numbers():
         assert f"{lab} {v:.2f}" in svg, lab             # named in the aria label
         assert f"{lab} {v:.2f}" in readme, lab          # and in the README alt text
 
-    # the card's copy says a Turkish retrieval model is the only dense winner
-    assert max(cards.RAG, key=lambda r: r[1])[0].startswith("dense"), cards.RAG
+    # the copy says only retrieval-trained dense models beat prefix BM25: the multilingual
+    # paraphrase model (MiniLM) must sit below it and the Turkish retrieval model above it.
+    # (e5-small/base, also retrieval-trained, beat it too, so "only ... Turkish" was false.)
+    rag = dict(cards.RAG)
+    assert rag["dense (multilingual)"] < rag["BM25 + 5-char prefix"] < rag["dense (Turkish model)"], rag
+    assert "only dense models trained for retrieval beat it" in svg
+    assert "trained for Turkish" not in svg
 
 
 def main():
