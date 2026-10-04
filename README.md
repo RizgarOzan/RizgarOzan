@@ -12,7 +12,7 @@ earns its cost, and game tools that score a level or catch a broken font before 
 Final-year Computer Education & Instructional Technology student at Hacettepe University, Ankara.
 
 <!-- summary:start -->
-**63 pull requests merged** into 19 projects I don't own — mteb, kornia, LightRAG and unity-mcp among them — with 31 more in review.
+**78 pull requests merged** into 23 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 28 more in review.
 <!-- summary:end -->
 
 ## Selected work
@@ -77,18 +77,18 @@ the rest are counted; [a workflow](.github/workflows/profile.yml) refreshes this
 <!-- oss:start -->
 | | Pull request | Project |
 |---|---|---|
-| 🟣 merged | [docs(reference): add run_tests and get_test_job examples](https://github.com/CoplayDev/unity-mcp/pull/1400) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.7k |
+| 🟣 merged | [fix: read model files as UTF-8 in extract_model_names.py](https://github.com/embeddings-benchmark/mteb/pull/5575) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [fix: skip top_ranked ids missing from queries in cross-encoder search](https://github.com/embeddings-benchmark/mteb/pull/5573) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [fix: find native m_ fields when setting built-in component properties](https://github.com/CoplayDev/unity-mcp/pull/1419) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.7k |
+| 🟣 merged | [fix: parse numeric tool parameters with the invariant culture](https://github.com/CoplayDev/unity-mcp/pull/1416) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.7k |
+| 🟣 merged | [fix: upper-case Roslyn severity with the invariant culture](https://github.com/CoplayDev/unity-mcp/pull/1420) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.7k |
+| 🟣 merged | [fix(md): keep text after a line break out of a code span](https://github.com/docling-project/docling/pull/4509) | [docling-project/docling](https://github.com/docling-project/docling) · ★ 68.4k |
+| 🟣 merged | [fix(enhance): accept broadcastable tensor weights in add_weighted](https://github.com/kornia/kornia/pull/5349) | [kornia/kornia](https://github.com/kornia/kornia) · ★ 11.4k |
 | 🟣 merged | [model: add Linkup-Platform/linkup-sparseup-embed-v1](https://github.com/embeddings-benchmark/mteb/pull/5547) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [fix: read task modalities in result filtering](https://github.com/embeddings-benchmark/mteb/pull/5550) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [docs(reference): add unity_docs and unity_reflect examples](https://github.com/CoplayDev/unity-mcp/pull/1401) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.7k |
 | 🟣 merged | [fix(augmentation): place RandomGaussianIllumination's peak at center * L - 0.5](https://github.com/kornia/kornia/pull/4990) | [kornia/kornia](https://github.com/kornia/kornia) · ★ 11.4k |
 | 🟣 merged | [docs(geometry): list the scaled large-root quartic defect (#4954) and pin it](https://github.com/kornia/kornia/pull/4989) | [kornia/kornia](https://github.com/kornia/kornia) · ★ 11.4k |
-| 🟣 merged | [fix(geometry): make solve_quartic's cubic fallback tolerance relative to the row](https://github.com/kornia/kornia/pull/4921) | [kornia/kornia](https://github.com/kornia/kornia) · ★ 11.4k |
-| 🟣 merged | [fix: don't place pair classification thresholds between tied scores](https://github.com/embeddings-benchmark/mteb/pull/5465) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [fix(ebcdic): keep fixed-point notation for scaled numbers](https://github.com/docling-project/docling/pull/4296) | [docling-project/docling](https://github.com/docling-project/docling) · ★ 68.3k |
-| 🟣 merged | [fix(afp): follow PTOCA control sequence chaining](https://github.com/docling-project/docling/pull/4297) | [docling-project/docling](https://github.com/docling-project/docling) · ★ 68.3k |
 
-<sub>…and 24 more merged pull requests to Effect-TS, ManimCommunity, SchemaStore, TheAlgorithms, e18e, embeddings-benchmark, mdn, modelscope, pylint-dev, radzenhq, umbraco.</sub>
+<sub>…and 31 more merged pull requests to Effect-TS, ManimCommunity, SchemaStore, TheAlgorithms, atlassian-api, e18e, embeddings-benchmark, mdn, modelscope, obsidian-full-calendar-remastered, pcottle, pylint-dev, radzenhq, umbraco, yairm210.</sub>
 <!-- oss:end -->
 
 ## Now · October 2026
