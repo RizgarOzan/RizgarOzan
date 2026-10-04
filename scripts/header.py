@@ -82,7 +82,7 @@ def render(t):
     eyebrow, _ = outline("seguisb.ttf", "AI SYSTEMS & GAME TOOLS PROGRAMMER  ·  PYTHON / C#  ·  ANKARA", 14, x, 92, tracking=2.2)
     first, w = outline("georgia.ttf", "Rızgar ", 82, x, 176)
     last, _ = outline("georgiai.ttf", "Ozan", 82, x + w, 176)
-    tagline, _ = outline("segoeui.ttf", "I build measurement systems: retrieval evals, and game tools.", 22, x, 228)
+    tagline, _ = outline("segoeui.ttf", "I build games, tools and AI systems.", 22, x, 228)
     bw = 6 * TILE + 5 * GAP
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Rızgar Ozan — AI systems and game tools programmer">
 <style>

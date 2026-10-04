@@ -1,19 +1,21 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img src="assets/header-light.svg" width="100%" alt="Rızgar Ozan — AI systems and game tools programmer. I build measurement systems: retrieval evals, and game tools.">
+  <img src="assets/header-light.svg" width="100%" alt="Rızgar Ozan, AI systems and game tools programmer. I build games, tools and AI systems.">
 </picture>
 
 <p align="center">
   <a href="https://rizgarozan.github.io">rizgarozan.github.io</a> · <a href="https://www.linkedin.com/in/rizgarozan/">LinkedIn</a> · <a href="https://rizgarozan.itch.io">itch.io</a> · <a href="https://huggingface.co/RizgarOzan">Hugging Face</a> · <a href="mailto:rizgarozan7@gmail.com">rizgarozan7@gmail.com</a>
 </p>
 
-I build **measurement systems**: retrieval evaluations that say which part of a RAG pipeline
+I build games, tools and AI systems: retrieval evaluations that say which part of a RAG pipeline
 earns its cost, and game tools that score a level or catch a broken font before anyone ships it.
 Final-year Computer Education & Instructional Technology student at Hacettepe University, Ankara.
 
 <!-- summary:start -->
 **61 pull requests merged** into 17 projects I don't own — mteb, kornia, LightRAG and unity-mcp among them — with 28 more in review.
 <!-- summary:end -->
+
+<a href="https://rizgarozan.github.io"><img src="assets/site.jpg" width="100%" alt="rizgarozan.github.io: a moonlit field where each sword standing in the ground is one of my projects; scroll down into the smithy for what I'm working on now."></a>
 
 ## Selected work
 
