@@ -12,7 +12,7 @@ earns its cost, and game tools that score a level or catch a broken font before 
 Final-year Computer Education & Instructional Technology student at Hacettepe University, Ankara.
 
 <!-- summary:start -->
-**61 pull requests merged** into 17 projects I don't own — mteb, kornia, LightRAG and unity-mcp among them — with 28 more in review.
+**80 pull requests merged** into 24 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 29 more in review.
 <!-- summary:end -->
 
 <a href="https://rizgarozan.github.io"><img src="assets/site.jpg" width="100%" alt="rizgarozan.github.io: a moonlit field where each sword standing in the ground is one of my projects; scroll down into the smithy for what I'm working on now."></a>
@@ -72,13 +72,13 @@ Fixes sent back to the retrieval and Unity tooling I use, refreshed weekly by [a
 <!-- oss:start -->
 | | Pull request | Project |
 |---|---|---|
-| 🟣 merged | [docs(reference): add run_tests and get_test_job examples](https://github.com/CoplayDev/unity-mcp/pull/1400) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.6k |
-| 🟣 merged | [model: add Linkup-Platform/linkup-sparseup-embed-v1](https://github.com/embeddings-benchmark/mteb/pull/5547) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [fix: read task modalities in result filtering](https://github.com/embeddings-benchmark/mteb/pull/5550) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [docs(reference): add unity_docs and unity_reflect examples](https://github.com/CoplayDev/unity-mcp/pull/1401) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.6k |
-| 🟣 merged | [fix(augmentation): place RandomGaussianIllumination's peak at center * L - 0.5](https://github.com/kornia/kornia/pull/4990) | [kornia/kornia](https://github.com/kornia/kornia) · ★ 11.4k |
+| 🟣 merged | [model: add KURE-Reranker-base and KURE-Reranker-nano](https://github.com/embeddings-benchmark/mteb/pull/5574) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [fix: read model files as UTF-8 in extract_model_names.py](https://github.com/embeddings-benchmark/mteb/pull/5575) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [fix: skip top_ranked ids missing from queries in cross-encoder search](https://github.com/embeddings-benchmark/mteb/pull/5573) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
+| 🟣 merged | [fix: find native m_ fields when setting built-in component properties](https://github.com/CoplayDev/unity-mcp/pull/1419) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.7k |
+| 🟣 merged | [fix: parse numeric tool parameters with the invariant culture](https://github.com/CoplayDev/unity-mcp/pull/1416) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.7k |
 
-<sub>…and 22 more merged pull requests to Effect-TS, ManimCommunity, TheAlgorithms, e18e, embeddings-benchmark, mdn, modelscope, pylint-dev, radzenhq.</sub>
+<sub>…and 32 more merged pull requests to Effect-TS, ManimCommunity, SchemaStore, TheAlgorithms, atlassian-api, chigwell, e18e, embeddings-benchmark, mdn, modelscope, obsidian-full-calendar-remastered, pcottle, pylint-dev, radzenhq, umbraco, yairm210.</sub>
 <!-- oss:end -->
 
 ## Now · October 2026
