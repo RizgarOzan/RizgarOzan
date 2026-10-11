@@ -55,10 +55,17 @@ def main():
     for hidden in ("mdn/content", "radzen-blazor", "browser-compat-data"):
         assert f"]({hidden}" not in out and f"/{hidden}/pull" not in out, hidden
 
-    # the rest are counted, with their projects named
+    # the rest are counted, and every merge is tallied by project
     assert "3 more merged pull requests" in out, out
-    for owner in ("mdn", "radzenhq"):
-        assert owner in out.rsplit("\n", 1)[-1], out
+    for name in ("content 1", "radzen-blazor 1", "mteb 1"):
+        assert name in out.rsplit("\n", 1)[-1], out
+
+    # rows plus the tail add up to the total, featured repos included (the tail used to skip them)
+    many = [pr("embeddings-benchmark/mteb", n) for n in range(10, 30)] + MERGED
+    full = p.oss_table({"issueCount": len(many), "nodes": many}, {"issueCount": 0, "nodes": []})
+    shown = full.count("| 🟣 merged |")
+    assert f"…and {len(many) - shown} more merged" in full, full
+    assert "mteb 21" in full, full
 
     # one project cannot take the whole table: the 4th kornia merge yields to the older LightRAG one
     busy = [pr("kornia/kornia", n, f"2026-09-{10 + n:02d}T00:00:00Z") for n in range(1, 5)] + MERGED

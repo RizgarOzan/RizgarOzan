@@ -8,6 +8,7 @@ import json
 import os
 import re
 import urllib.request
+from collections import Counter
 from pathlib import Path
 
 LOGIN = "RizgarOzan"
@@ -22,13 +23,14 @@ FEATURED = {
     "CoplayDev/unity-mcp",
     "openupm/openupm",
 }
+TOP_PROJECTS = 10  # projects named in the tail line, busiest first
 ROOT = Path(__file__).resolve().parent.parent
 PRS = f"author:{LOGIN} type:pr -user:{LOGIN}"
 PR_FIELDS = "... on PullRequest { title url createdAt mergedAt repository { nameWithOwner url stargazerCount } }"
 QUERY = f"""
-query {{
-  merged: search(type: ISSUE, first: 100, query: "{PRS} is:merged sort:updated-desc") {{
-    issueCount nodes {{ {PR_FIELDS} }}
+query($after: String) {{
+  merged: search(type: ISSUE, first: 100, after: $after, query: "{PRS} is:merged sort:updated-desc") {{
+    issueCount pageInfo {{ hasNextPage endCursor }} nodes {{ {PR_FIELDS} }}
   }}
   open: search(type: ISSUE, first: 20, query: "{PRS} is:open sort:created-desc") {{
     issueCount nodes {{ {PR_FIELDS} }}
@@ -37,10 +39,10 @@ query {{
 """
 
 
-def fetch():
+def query(after=None):
     req = urllib.request.Request(
         "https://api.github.com/graphql",
-        data=json.dumps({"query": QUERY}).encode(),
+        data=json.dumps({"query": QUERY, "variables": {"after": after}}).encode(),
         headers={"Authorization": f"bearer {os.environ['GITHUB_TOKEN']}"},
     )
     with urllib.request.urlopen(req) as resp:
@@ -48,6 +50,17 @@ def fetch():
     if "errors" in body:
         raise SystemExit(f"GraphQL errors: {body['errors']}")
     return body["data"]
+
+
+def fetch():
+    """Search returns 100 merges a page; past that the project count and the tail line fell short."""
+    data = query()
+    page = data["merged"]["pageInfo"]
+    while page["hasNextPage"]:
+        more = query(page["endCursor"])["merged"]
+        data["merged"]["nodes"] += more["nodes"]
+        page = more["pageInfo"]
+    return data
 
 
 def stars(n):
@@ -64,13 +77,17 @@ def featured(pr):
     return pr["repository"]["nameWithOwner"] in FEATURED
 
 
-def rest_line(prs):
-    """One line for the merges that do not get a row, naming the projects they went to."""
-    if not prs:
+def rest_line(prs, shown):
+    """One line for the merges that do not get a row, with every merge counted by project."""
+    rest = len(prs) - shown
+    if rest <= 0:
         return ""
-    owners = sorted({p["repository"]["nameWithOwner"].split("/")[0] for p in prs})
-    return (f"<sub>…and {len(prs)} more merged pull request{'s' * (len(prs) != 1)} to "
-            + ", ".join(owners) + ".</sub>")
+    counts = Counter(p["repository"]["nameWithOwner"].split("/")[1] for p in prs).most_common()
+    top = " · ".join(f"{name} {n}" for name, n in counts[:TOP_PROJECTS])
+    others = len(counts) - TOP_PROJECTS
+    tail = f", and {others} more project{'s' * (others != 1)}" if others > 0 else ""
+    return (f"<sub>…and {rest} more merged pull request{'s' * (rest != 1)}. "
+            f"Merges by project: {top}{tail}.</sub>")
 
 
 def oss_summary(merged, open_):
@@ -108,11 +125,11 @@ def spread(prs):
 def oss_table(merged, open_):
     merged_prs = sorted(merged["nodes"], key=lambda p: p["mergedAt"], reverse=True)
     rows = ([row("🟣 merged", p) for p in spread(merged_prs)]
-            + [row("🟢 in review", p) for p in spread(open_["nodes"])])
-    tail = rest_line([p for p in merged_prs if not featured(p)])
+            + [row("🟢 in review", p) for p in spread(open_["nodes"])])[:5]
+    tail = rest_line(merged_prs, sum(r.startswith("| 🟣") for r in rows))
     if not rows:
         return tail
-    table = "\n".join(["| | Pull request | Project |", "|---|---|---|", *rows[:5]])
+    table = "\n".join(["| | Pull request | Project |", "|---|---|---|", *rows])
     return "\n\n".join(part for part in [table, tail] if part)
 
 
