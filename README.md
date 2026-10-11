@@ -67,7 +67,7 @@ Final-year Computer Education & Instructional Technology student at Hacettepe Un
 
 ## Open source
 
-Fixes sent back to the retrieval and Unity tooling I use, refreshed weekly by [a workflow](.github/workflows/profile.yml).
+Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a workflow](.github/workflows/profile.yml).
 
 <!-- oss:start -->
 | | Pull request | Project |

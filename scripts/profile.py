@@ -1,6 +1,6 @@
 """Refresh the open-source table in README.md.
 
-Runs weekly in .github/workflows/profile.yml. Locally:
+Runs daily in .github/workflows/profile.yml. Locally:
     GITHUB_TOKEN=$(gh auth token) python scripts/profile.py
 Standard library only.
 """
