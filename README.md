@@ -12,7 +12,7 @@ earns its cost, and game tools that score a level or catch a broken font before 
 Final-year Computer Education & Instructional Technology student at Hacettepe University, Ankara.
 
 <!-- summary:start -->
-**80 pull requests merged** into 24 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 29 more in review.
+**106 pull requests merged** into 34 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 27 more in review.
 <!-- summary:end -->
 
 <a href="https://rizgarozan.github.io"><img src="assets/site.jpg" width="100%" alt="rizgarozan.github.io: a moonlit field where each sword standing in the ground is one of my projects; scroll down into the smithy for what I'm working on now."></a>
@@ -37,10 +37,20 @@ Final-year Computer Education & Instructional Technology student at Hacettepe Un
 </a>
 </td>
 <td width="50%" valign="top">
+<a href="https://github.com/RizgarOzan/lockstep-tactics">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-lockstep-tactics-dark.svg">
+  <img src="assets/card-lockstep-tactics-light.svg" width="100%" alt="03 Lockstep Tactics — C++20 tactics simulation that stays bit-identical across MSVC, gcc and WebAssembly: fixed-point maths, own RNG, per-tick replay hashes and a bisector that names the desync. 1000 of 1000 matches end on the same hash; 100 of 100 injected desyncs located.">
+</picture>
+</a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 <a href="https://github.com/RizgarOzan/tmp-glyph-audit">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-tmp-glyph-audit-dark.svg">
-  <img src="assets/card-tmp-glyph-audit-light.svg" width="100%" alt="03 TMP Glyph Audit — Unity package that finds every TextMeshPro text the fonts cannot draw, through TMP's real fallback chain. Editor window plus CI exit codes.">
+  <img src="assets/card-tmp-glyph-audit-light.svg" width="100%" alt="04 TMP Glyph Audit — Unity package that finds every TextMeshPro text the fonts cannot draw, through TMP's real fallback chain. Editor window plus CI exit codes.">
 </picture>
 </a>
 </td>
@@ -50,15 +60,17 @@ Final-year Computer Education & Instructional Technology student at Hacettepe Un
 <a href="https://rizgarozan.itch.io/bilim-dedektifi">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-bilim-dedektifi-dark.svg">
-  <img src="assets/card-bilim-dedektifi-light.svg" width="100%" alt="04 Bilim Dedektifi — short educational mystery game, team course project at Hacettepe, free on itch.io.">
+  <img src="assets/card-bilim-dedektifi-light.svg" width="100%" alt="05 Bilim Dedektifi — short educational mystery game, team course project at Hacettepe, free on itch.io.">
 </picture>
 </a>
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ilkhanarda/Code-Enigma">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-code-enigma-dark.svg">
-  <img src="assets/card-code-enigma-light.svg" width="100%" alt="05 Code-Enigma — React 19 academic progress platform built with İlkhan Arda Akmaca; I built the dashboard, peer comparison markers and the filter and settings controls.">
+  <img src="assets/card-code-enigma-light.svg" width="100%" alt="06 Code-Enigma — React 19 academic progress platform built with İlkhan Arda Akmaca; I built the dashboard, peer comparison markers and the filter and settings controls.">
 </picture>
 </a>
 </td>
@@ -67,21 +79,22 @@ Final-year Computer Education & Instructional Technology student at Hacettepe Un
 
 ## Open source
 
-Fixes sent back to the retrieval and Unity tooling I use, refreshed weekly by [a workflow](.github/workflows/profile.yml).
+Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a workflow](.github/workflows/profile.yml).
 
 <!-- oss:start -->
 | | Pull request | Project |
 |---|---|---|
-| 🟣 merged | [model: add KURE-Reranker-base and KURE-Reranker-nano](https://github.com/embeddings-benchmark/mteb/pull/5574) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [fix: read model files as UTF-8 in extract_model_names.py](https://github.com/embeddings-benchmark/mteb/pull/5575) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [fix: skip top_ranked ids missing from queries in cross-encoder search](https://github.com/embeddings-benchmark/mteb/pull/5573) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.4k |
-| 🟣 merged | [fix: find native m_ fields when setting built-in component properties](https://github.com/CoplayDev/unity-mcp/pull/1419) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.7k |
-| 🟣 merged | [fix: parse numeric tool parameters with the invariant culture](https://github.com/CoplayDev/unity-mcp/pull/1416) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 14.7k |
+| 🟣 merged | [fix(augmentation): make auto policies picklable](https://github.com/kornia/kornia/pull/5651) | [kornia/kornia](https://github.com/kornia/kornia) · ★ 11.4k |
+| 🟣 merged | [[fix] Warn about every include_positives option that discards the positives](https://github.com/huggingface/sentence-transformers/pull/4053) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.2k |
+| 🟣 merged | [[fix] Keep leading dims when binary-quantizing a single embedding](https://github.com/huggingface/sentence-transformers/pull/4061) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.2k |
+| 🟣 merged | [fix(pdf): keep failed-page sizes on the conversion, not on the pipeline](https://github.com/docling-project/docling/pull/4486) | [docling-project/docling](https://github.com/docling-project/docling) · ★ 68.7k |
+| 🟣 merged | [fix(html): keep description lists with nested divs or inner headings](https://github.com/docling-project/docling/pull/4578) | [docling-project/docling](https://github.com/docling-project/docling) · ★ 68.7k |
 
-<sub>…and 32 more merged pull requests to Effect-TS, ManimCommunity, SchemaStore, TheAlgorithms, atlassian-api, chigwell, e18e, embeddings-benchmark, mdn, modelscope, obsidian-full-calendar-remastered, pcottle, pylint-dev, radzenhq, umbraco, yairm210.</sub>
+<sub>…and 101 more merged pull requests. Merges by project: mteb 18 · kornia 16 · unity-mcp 8 · docling 6 · browser-compat-data 5 · results 4 · LightRAG 4 · module-replacements 3 · telegram-mcp 3 · sentence-transformers 3, and 24 more projects.</sub>
 <!-- oss:end -->
 
 ## Now · October 2026
 
-- Turkish RAG Eval is at 300 queries (58 hand-labelled, 242 LLM-drafted and double-labelled) across five models, with the dataset on Hugging Face; next is human review of the drafts and an MTEB task.
+- Turkish RAG Eval 0.2.0 is on [PyPI](https://pypi.org/project/turkish-rag-eval/): 300 queries (58 hand-labelled, 242 LLM-drafted and double-labelled) across five models, with the dataset on Hugging Face. The MTEB task is in review ([mteb#5615](https://github.com/embeddings-benchmark/mteb/pull/5615)), and the drafted queries are open for human review as good first issues.
+- [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics) is new: a C++20 simulation checked on every push to be bit-identical between MSVC and WebAssembly, with a [match you can watch in the browser](https://rizgarozan.github.io/lockstep-tactics/). Next: a real player instead of random orders.
 - Graduating in June 2027; open to internships and new-grad roles in applied AI and game engineering.

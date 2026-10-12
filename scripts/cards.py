@@ -153,6 +153,20 @@ def dashboard(t, x0, y0):
     return "".join(out)
 
 
+def same_hash(t, x0, y0):
+    """lockstep-tactics CI: one replay hash, three compilers, 1000 matches."""
+    out = [text(t, x0, y0 - 14, "SAME HASH, 1000 MATCHES", 11, "muted", 600, spacing=1.6)]
+    for i, lab in enumerate(["MSVC x64", "gcc 16", "WebAssembly"]):
+        y = y0 + 10 + i * 40
+        out.append(text(t, x0, y + 4, lab, 12, "soft"))
+        out.append(f'<rect x="{x0}" y="{y + 12}" width="156" height="20" rx="5" fill="{t["accent"]}" fill-opacity=".10" stroke="{t["hair"]}"/>')
+        out.append(text(t, x0 + 8, y + 26, "0b99723fda2ac4bc", 11, "accent", family=MONO))
+    y = y0 + 10 + 3 * 40 + 4
+    out.append(text(t, x0, y + 12, "1000 / 1000 identical", 12, "ink", 600))
+    out.append(text(t, x0, y + 30, "desync bisector: 100 / 100", 11, "muted"))
+    return "".join(out)
+
+
 # ---------------------------------------------------------------- cards
 
 def hero(t):
@@ -184,18 +198,23 @@ CARDS = {
         ["A match-3 workbench, not a match-3 game: an engine-", "independent C# rules core, a level format you can read in", "a diff, and a bot that ranks a level over 1000 games."],
         "C#  ·  UNITY 6  ·  xUNIT  ·  WEBGL", lambda t, x, y: curve(t, x, y + 14, 120, 92),
         "Match3 Lab: C# match-3 rules core, level format, Unity editor tools and a bot simulator; the greedy bot's win rate falls from 100% on level 1 to 50% on level 6"),
+    "lockstep-tactics": lambda t: card(
+        t, "03", "Lockstep ", "Tactics",
+        ["A C++20 tactics simulation that stays bit-identical across", "MSVC, gcc and WebAssembly: fixed-point maths, own RNG,", "per-tick replay hashes and a bisector that names the desync."],
+        "C++20  ·  CMAKE  ·  EMSCRIPTEN  ·  RAYLIB", same_hash,
+        "Lockstep Tactics: C++20 simulation bit-identical across MSVC, gcc and WebAssembly; 1000 of 1000 matches end on the same hash, 100 of 100 injected desyncs located"),
     "tmp-glyph-audit": lambda t: card(
-        t, "03", "TMP Glyph ", "Audit",
+        t, "04", "TMP Glyph ", "Audit",
         ["Finds every TextMeshPro text your fonts cannot draw:", "scenes, prefabs and runtime text files, through TMP's", "real fallback chain. Editor window + CI exit codes."],
         "UNITY PACKAGE  ·  C#  ·  CI", glyph_tiles,
         "TMP Glyph Audit: Unity package that finds every TextMeshPro text the fonts cannot draw"),
     "bilim-dedektifi": lambda t: card(
-        t, "04", "Bilim ", "Dedektifi",
+        t, "05", "Bilim ", "Dedektifi",
         ["A short educational mystery told through a detective", "investigating a suspicious death. Team course", "project at Hacettepe; free on itch.io."],
         "UNITY  ·  TEAM PROJECT  ·  ITCH.IO", magnifier,
         "Bilim Dedektifi: educational detective game, free on itch.io"),
     "code-enigma": lambda t: card(
-        t, "05", "Code-", "Enigma",
+        t, "06", "Code-", "Enigma",
         ["Maths-first academic progress platform, built with", "İlkhan Arda Akmaca. I built the dashboard, the peer", "comparison markers, the filter and settings controls."],
         "REACT 19  ·  VITE  ·  TAILWIND 4  ·  GSAP", dashboard,
         "Code-Enigma: React 19 academic progress platform"),
