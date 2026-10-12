@@ -37,10 +37,20 @@ Final-year Computer Education & Instructional Technology student at Hacettepe Un
 </a>
 </td>
 <td width="50%" valign="top">
+<a href="https://github.com/RizgarOzan/lockstep-tactics">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-lockstep-tactics-dark.svg">
+  <img src="assets/card-lockstep-tactics-light.svg" width="100%" alt="03 Lockstep Tactics — C++20 tactics simulation that stays bit-identical across MSVC, gcc and WebAssembly: fixed-point maths, own RNG, per-tick replay hashes and a bisector that names the desync. 1000 of 1000 matches end on the same hash; 100 of 100 injected desyncs located.">
+</picture>
+</a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 <a href="https://github.com/RizgarOzan/tmp-glyph-audit">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-tmp-glyph-audit-dark.svg">
-  <img src="assets/card-tmp-glyph-audit-light.svg" width="100%" alt="03 TMP Glyph Audit — Unity package that finds every TextMeshPro text the fonts cannot draw, through TMP's real fallback chain. Editor window plus CI exit codes.">
+  <img src="assets/card-tmp-glyph-audit-light.svg" width="100%" alt="04 TMP Glyph Audit — Unity package that finds every TextMeshPro text the fonts cannot draw, through TMP's real fallback chain. Editor window plus CI exit codes.">
 </picture>
 </a>
 </td>
@@ -50,15 +60,17 @@ Final-year Computer Education & Instructional Technology student at Hacettepe Un
 <a href="https://rizgarozan.itch.io/bilim-dedektifi">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-bilim-dedektifi-dark.svg">
-  <img src="assets/card-bilim-dedektifi-light.svg" width="100%" alt="04 Bilim Dedektifi — short educational mystery game, team course project at Hacettepe, free on itch.io.">
+  <img src="assets/card-bilim-dedektifi-light.svg" width="100%" alt="05 Bilim Dedektifi — short educational mystery game, team course project at Hacettepe, free on itch.io.">
 </picture>
 </a>
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ilkhanarda/Code-Enigma">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-code-enigma-dark.svg">
-  <img src="assets/card-code-enigma-light.svg" width="100%" alt="05 Code-Enigma — React 19 academic progress platform built with İlkhan Arda Akmaca; I built the dashboard, peer comparison markers and the filter and settings controls.">
+  <img src="assets/card-code-enigma-light.svg" width="100%" alt="06 Code-Enigma — React 19 academic progress platform built with İlkhan Arda Akmaca; I built the dashboard, peer comparison markers and the filter and settings controls.">
 </picture>
 </a>
 </td>
@@ -84,4 +96,5 @@ Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a 
 ## Now · October 2026
 
 - Turkish RAG Eval 0.2.0 is on [PyPI](https://pypi.org/project/turkish-rag-eval/): 300 queries (58 hand-labelled, 242 LLM-drafted and double-labelled) across five models, with the dataset on Hugging Face. The MTEB task is in review ([mteb#5615](https://github.com/embeddings-benchmark/mteb/pull/5615)), and the drafted queries are open for human review as good first issues.
+- [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics) is new: a C++20 simulation checked on every push to be bit-identical between MSVC and WebAssembly, with a [match you can watch in the browser](https://rizgarozan.github.io/lockstep-tactics/). Next: a real player instead of random orders.
 - Graduating in June 2027; open to internships and new-grad roles in applied AI and game engineering.
