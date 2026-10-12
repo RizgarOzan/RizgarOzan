@@ -12,7 +12,7 @@ earns its cost, and game tools that score a level or catch a broken font before 
 Final-year Computer Education & Instructional Technology student at Hacettepe University, Ankara.
 
 <!-- summary:start -->
-**112 pull requests merged** into 36 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 28 more in review.
+**113 pull requests merged** into 36 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 27 more in review.
 <!-- summary:end -->
 
 <a href="https://rizgarozan.github.io"><img src="assets/site.jpg" width="100%" alt="rizgarozan.github.io: a moonlit field where each sword standing in the ground is one of my projects; scroll down into the smithy for what I'm working on now."></a>
@@ -90,13 +90,13 @@ Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a 
 <!-- oss:start -->
 | | Pull request | Project |
 |---|---|---|
+| 🟣 merged | [fix(asciidoc): keep a table whole across blank and wrapped lines](https://github.com/docling-project/docling/pull/4761) | [docling-project/docling](https://github.com/docling-project/docling) · ★ 68.8k |
 | 🟣 merged | [fix(geometry): accept empty batches in spatial_softmax2d and spatial_expectation2d](https://github.com/kornia/kornia/pull/5739) | [kornia/kornia](https://github.com/kornia/kornia) · ★ 11.4k |
 | 🟣 merged | [fix: keep the benchmark in BenchmarkResults.join_revisions](https://github.com/embeddings-benchmark/mteb/pull/5633) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 | 🟣 merged | [fix(augmentation): make auto policies picklable](https://github.com/kornia/kornia/pull/5651) | [kornia/kornia](https://github.com/kornia/kornia) · ★ 11.4k |
 | 🟣 merged | [[fix] Warn about every include_positives option that discards the positives](https://github.com/huggingface/sentence-transformers/pull/4053) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.2k |
-| 🟣 merged | [[fix] Keep leading dims when binary-quantizing a single embedding](https://github.com/huggingface/sentence-transformers/pull/4061) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.2k |
 
-<sub>…and 107 more merged pull requests. Merges by project: mteb 19 · kornia 17 · unity-mcp 8 · docling 6 · browser-compat-data 5 · telegram-mcp 4 · results 4 · LightRAG 4 · module-replacements 3 · sentence-transformers 3, and 26 more projects.</sub>
+<sub>…and 108 more merged pull requests. Merges by project: mteb 19 · kornia 17 · unity-mcp 8 · docling 7 · browser-compat-data 5 · telegram-mcp 4 · results 4 · LightRAG 4 · module-replacements 3 · sentence-transformers 3, and 26 more projects.</sub>
 <!-- oss:end -->
 
 ## Now · October 2026
