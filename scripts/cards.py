@@ -167,6 +167,23 @@ def same_hash(t, x0, y0):
     return "".join(out)
 
 
+def kitchen_loop(t, x0, y0):
+    """Suspicious Delicacies: the day loop, and the meter it all feeds."""
+    out = [text(t, x0, y0 - 14, "ONE DAY", 11, "muted", 600, spacing=1.6)]
+    for i, (lab, sub) in enumerate([("HUNT", "kill or spare"), ("COOK", "prep, stations"), ("SERVE", "customers, QTE")]):
+        y = y0 + 6 + i * 40
+        out.append(f'<rect x="{x0}" y="{y}" width="156" height="28" rx="6" fill="{t["accent"]}" fill-opacity=".10" stroke="{t["hair"]}"/>')
+        out.append(text(t, x0 + 10, y + 18, lab, 11, "ink", 600, spacing=1.2))
+        out.append(text(t, x0 + 146, y + 18, sub, 10, "muted", anchor="end"))
+        if i < 2:
+            out.append(f'<path d="M{x0 + 78} {y + 28} l0 8 m-4 -4 l4 4 l4 -4" fill="none" stroke="{t["muted"]}" stroke-width="1.2"/>')
+    y = y0 + 6 + 3 * 40 + 6
+    out.append(text(t, x0, y + 10, "SUSPICION", 10, "muted", 600, spacing=1.4))
+    out.append(f'<rect x="{x0}" y="{y + 16}" width="156" height="6" rx="3" fill="{t["hair"]}"/>')
+    out.append(f'<rect x="{x0}" y="{y + 16}" width="58" height="6" rx="3" fill="{t["accent"]}"/>')
+    return "".join(out)
+
+
 # ---------------------------------------------------------------- cards
 
 def hero(t):
@@ -203,18 +220,23 @@ CARDS = {
         ["A C++20 tactics simulation that stays bit-identical across", "MSVC, gcc and WebAssembly: fixed-point maths, own RNG,", "per-tick replay hashes and a bisector that names the desync."],
         "C++20  ·  CMAKE  ·  EMSCRIPTEN  ·  RAYLIB", same_hash,
         "Lockstep Tactics: C++20 simulation bit-identical across MSVC, gcc and WebAssembly; 1000 of 1000 matches end on the same hash, 100 of 100 injected desyncs located"),
+    "suspicious-delicacies": lambda t: card(
+        t, "04", "Suspicious ", "Delicacies",
+        ["A chef with a secret hunts friendly creatures for ingredients,", "cooks, serves and dodges suspicion: restaurant management", "welded to a turn-based RPG. Team of three; demo in progress."],
+        "UNITY 6  ·  C#  ·  2D URP  ·  TEAM PROJECT", kitchen_loop,
+        "Suspicious Delicacies: restaurant management welded to a turn-based RPG, Unity 6 team project; I own the restaurant, customer AI, QTE, overworld and editor tooling"),
     "tmp-glyph-audit": lambda t: card(
-        t, "04", "TMP Glyph ", "Audit",
+        t, "05", "TMP Glyph ", "Audit",
         ["Finds every TextMeshPro text your fonts cannot draw:", "scenes, prefabs and runtime text files, through TMP's", "real fallback chain. Editor window + CI exit codes."],
         "UNITY PACKAGE  ·  C#  ·  CI", glyph_tiles,
         "TMP Glyph Audit: Unity package that finds every TextMeshPro text the fonts cannot draw"),
     "bilim-dedektifi": lambda t: card(
-        t, "05", "Bilim ", "Dedektifi",
+        t, "06", "Bilim ", "Dedektifi",
         ["A short educational mystery told through a detective", "investigating a suspicious death. Team course", "project at Hacettepe; free on itch.io."],
         "UNITY  ·  TEAM PROJECT  ·  ITCH.IO", magnifier,
         "Bilim Dedektifi: educational detective game, free on itch.io"),
     "code-enigma": lambda t: card(
-        t, "06", "Code-", "Enigma",
+        t, "07", "Code-", "Enigma",
         ["Maths-first academic progress platform, built with", "İlkhan Arda Akmaca. I built the dashboard, the peer", "comparison markers, the filter and settings controls."],
         "REACT 19  ·  VITE  ·  TAILWIND 4  ·  GSAP", dashboard,
         "Code-Enigma: React 19 academic progress platform"),

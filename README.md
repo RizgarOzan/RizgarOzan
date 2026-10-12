@@ -47,10 +47,18 @@ Final-year Computer Education & Instructional Technology student at Hacettepe Un
 </tr>
 <tr>
 <td width="50%" valign="top">
+<a href="https://rizgarozan.github.io/#suspicious-delicacies">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-suspicious-delicacies-dark.svg">
+  <img src="assets/card-suspicious-delicacies-light.svg" width="100%" alt="04 Suspicious Delicacies — Unity 6 team project: a chef with a secret hunts friendly creatures for ingredients, cooks, serves and dodges suspicion; restaurant management welded to a turn-based RPG. I own the restaurant, customer AI, QTE, overworld and editor tooling. Demo in progress.">
+</picture>
+</a>
+</td>
+<td width="50%" valign="top">
 <a href="https://github.com/RizgarOzan/tmp-glyph-audit">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-tmp-glyph-audit-dark.svg">
-  <img src="assets/card-tmp-glyph-audit-light.svg" width="100%" alt="04 TMP Glyph Audit — Unity package that finds every TextMeshPro text the fonts cannot draw, through TMP's real fallback chain. Editor window plus CI exit codes.">
+  <img src="assets/card-tmp-glyph-audit-light.svg" width="100%" alt="05 TMP Glyph Audit — Unity package that finds every TextMeshPro text the fonts cannot draw, through TMP's real fallback chain. Editor window plus CI exit codes.">
 </picture>
 </a>
 </td>
@@ -60,17 +68,15 @@ Final-year Computer Education & Instructional Technology student at Hacettepe Un
 <a href="https://rizgarozan.itch.io/bilim-dedektifi">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-bilim-dedektifi-dark.svg">
-  <img src="assets/card-bilim-dedektifi-light.svg" width="100%" alt="05 Bilim Dedektifi — short educational mystery game, team course project at Hacettepe, free on itch.io.">
+  <img src="assets/card-bilim-dedektifi-light.svg" width="100%" alt="06 Bilim Dedektifi — short educational mystery game, team course project at Hacettepe, free on itch.io.">
 </picture>
 </a>
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ilkhanarda/Code-Enigma">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-code-enigma-dark.svg">
-  <img src="assets/card-code-enigma-light.svg" width="100%" alt="06 Code-Enigma — React 19 academic progress platform built with İlkhan Arda Akmaca; I built the dashboard, peer comparison markers and the filter and settings controls.">
+  <img src="assets/card-code-enigma-light.svg" width="100%" alt="07 Code-Enigma — React 19 academic progress platform built with İlkhan Arda Akmaca; I built the dashboard, peer comparison markers and the filter and settings controls.">
 </picture>
 </a>
 </td>
