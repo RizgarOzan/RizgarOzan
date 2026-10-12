@@ -12,7 +12,7 @@ earns its cost, and game tools that score a level or catch a broken font before 
 Final-year Computer Education & Instructional Technology student at Hacettepe University, Ankara.
 
 <!-- summary:start -->
-**111 pull requests merged** into 36 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 27 more in review.
+**112 pull requests merged** into 36 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 28 more in review.
 <!-- summary:end -->
 
 <a href="https://rizgarozan.github.io"><img src="assets/site.jpg" width="100%" alt="rizgarozan.github.io: a moonlit field where each sword standing in the ground is one of my projects; scroll down into the smithy for what I'm working on now."></a>
@@ -96,7 +96,7 @@ Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a 
 | 🟣 merged | [[fix] Warn about every include_positives option that discards the positives](https://github.com/huggingface/sentence-transformers/pull/4053) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.2k |
 | 🟣 merged | [[fix] Keep leading dims when binary-quantizing a single embedding](https://github.com/huggingface/sentence-transformers/pull/4061) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.2k |
 
-<sub>…and 106 more merged pull requests. Merges by project: mteb 19 · kornia 17 · unity-mcp 8 · docling 6 · browser-compat-data 5 · results 4 · LightRAG 4 · module-replacements 3 · telegram-mcp 3 · sentence-transformers 3, and 26 more projects.</sub>
+<sub>…and 107 more merged pull requests. Merges by project: mteb 19 · kornia 17 · unity-mcp 8 · docling 6 · browser-compat-data 5 · telegram-mcp 4 · results 4 · LightRAG 4 · module-replacements 3 · sentence-transformers 3, and 26 more projects.</sub>
 <!-- oss:end -->
 
 ## Now · October 2026
