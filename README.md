@@ -40,7 +40,7 @@ Final-year Computer Education & Instructional Technology student at Hacettepe Un
 <a href="https://github.com/RizgarOzan/lockstep-tactics">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-lockstep-tactics-dark.svg">
-  <img src="assets/card-lockstep-tactics-light.svg" width="100%" alt="03 Lockstep Tactics — C++20 tactics simulation that stays bit-identical across MSVC, gcc and WebAssembly: fixed-point maths, own RNG, per-tick replay hashes and a bisector that names the desync. 1000 of 1000 matches end on the same hash; 100 of 100 injected desyncs located.">
+  <img src="assets/card-lockstep-tactics-light.svg" width="100%" alt="03 Lockstep Tactics — C++20 tactics game, playable in the browser against an integer-only AI, that stays bit-identical across MSVC x64, Apple clang arm64 and WebAssembly: fixed-point maths, own RNG, per-tick replay hashes and a bisector that names the desync. 1000 of 1000 matches end on the same hash; 100 of 100 injected desyncs located; the AI wins 978 of 1000 against random orders.">
 </picture>
 </a>
 </td>
@@ -102,5 +102,5 @@ Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a 
 ## Now · October 2026
 
 - Turkish RAG Eval 0.2.0 is on [PyPI](https://pypi.org/project/turkish-rag-eval/): 300 queries (58 hand-labelled, 242 LLM-drafted and double-labelled) across five models, with the dataset on Hugging Face. The MTEB task is in review ([mteb#5615](https://github.com/embeddings-benchmark/mteb/pull/5615)), and the drafted queries are open for human review as good first issues.
-- [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics) is new: a C++20 simulation checked on every push to be bit-identical between MSVC and WebAssembly, with a [match you can watch in the browser](https://rizgarozan.github.io/lockstep-tactics/). Next: a real player instead of random orders.
+- [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics) is playable: a C++20 tactics game checked on every push to be bit-identical between MSVC x64, Apple clang arm64 and WebAssembly, with an integer-only AI that wins 978 of 1,000 matches against random orders. [Play it in the browser](https://rizgarozan.github.io/lockstep-tactics/); a saved match verifies tick by tick on any machine. Next: two browsers exchanging commands over a relay.
 - Graduating in June 2027; open to internships and new-grad roles in applied AI and game engineering.

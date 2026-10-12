@@ -156,14 +156,15 @@ def dashboard(t, x0, y0):
 def same_hash(t, x0, y0):
     """lockstep-tactics CI: one replay hash, three compilers, 1000 matches."""
     out = [text(t, x0, y0 - 14, "SAME HASH, 1000 MATCHES", 11, "muted", 600, spacing=1.6)]
-    for i, lab in enumerate(["MSVC x64", "gcc 16", "WebAssembly"]):
+    for i, lab in enumerate(["MSVC x64", "Apple clang arm64", "WebAssembly"]):
         y = y0 + 10 + i * 40
         out.append(text(t, x0, y + 4, lab, 12, "soft"))
         out.append(f'<rect x="{x0}" y="{y + 12}" width="156" height="20" rx="5" fill="{t["accent"]}" fill-opacity=".10" stroke="{t["hair"]}"/>')
-        out.append(text(t, x0 + 8, y + 26, "0b99723fda2ac4bc", 11, "accent", family=MONO))
+        out.append(text(t, x0 + 8, y + 26, "8689ab0507b7d93c", 11, "accent", family=MONO))
     y = y0 + 10 + 3 * 40 + 4
     out.append(text(t, x0, y + 12, "1000 / 1000 identical", 12, "ink", 600))
     out.append(text(t, x0, y + 30, "desync bisector: 100 / 100", 11, "muted"))
+    out.append(text(t, x0, y + 46, "AI vs random orders: 978 / 1000", 11, "muted"))
     return "".join(out)
 
 
@@ -217,9 +218,9 @@ CARDS = {
         "Match3 Lab: C# match-3 rules core, level format, Unity editor tools and a bot simulator; the greedy bot's win rate falls from 100% on level 1 to 50% on level 6"),
     "lockstep-tactics": lambda t: card(
         t, "03", "Lockstep ", "Tactics",
-        ["A C++20 tactics simulation that stays bit-identical across", "MSVC, gcc and WebAssembly: fixed-point maths, own RNG,", "per-tick replay hashes and a bisector that names the desync."],
+        ["A C++20 tactics game, playable in the browser, that stays", "bit-identical across MSVC, clang arm64 and WebAssembly:", "fixed-point, replay hashes, a desync bisector, an integer AI."],
         "C++20  ·  CMAKE  ·  EMSCRIPTEN  ·  RAYLIB", same_hash,
-        "Lockstep Tactics: C++20 simulation bit-identical across MSVC, gcc and WebAssembly; 1000 of 1000 matches end on the same hash, 100 of 100 injected desyncs located"),
+        "Lockstep Tactics: C++20 tactics game playable in the browser, bit-identical across MSVC x64, Apple clang arm64 and WebAssembly; 1000 of 1000 matches end on the same hash, 100 of 100 injected desyncs located, the integer-only AI wins 978 of 1000 against random orders"),
     "suspicious-delicacies": lambda t: card(
         t, "04", "Suspicious ", "Delicacies",
         ["A chef with a secret hunts friendly creatures for ingredients,", "cooks, serves and dodges suspicion: restaurant management", "welded to a turn-based RPG. Team of three; demo in progress."],
