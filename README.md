@@ -12,7 +12,7 @@ earns its cost, and game tools that score a level or catch a broken font before 
 Final-year Computer Education & Instructional Technology student at Hacettepe University, Ankara.
 
 <!-- summary:start -->
-**124 pull requests merged** into 37 projects I don't own — mteb, kornia, docling and unity-mcp among them — with 21 more in review.
+**124 pull requests merged** into 37 projects I don't own — mteb, kornia, docling and unity-mcp among them — with 22 more in review.
 <!-- summary:end -->
 
 <a href="https://rizgarozan.github.io"><img src="assets/site.jpg" width="100%" alt="rizgarozan.github.io: a moonlit field where each sword standing in the ground is one of my projects; scroll down into the smithy for what I'm working on now."></a>
@@ -93,7 +93,7 @@ Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a 
 | 🟣 merged | [fix: make the multilabel classification evaluation cap work](https://github.com/embeddings-benchmark/mteb/pull/5514) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 | 🟣 merged | [tests: write the citation cache as indented JSON](https://github.com/embeddings-benchmark/mteb/pull/5685) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 | 🟣 merged | [dataset: add TurkishRAGEvalRetrieval (Turkish passage retrieval, health)](https://github.com/embeddings-benchmark/mteb/pull/5615) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
-| 🟣 merged | [fix(pptx): move footer placeholders to the furniture layer](https://github.com/docling-project/docling/pull/4746) | [docling-project/docling](https://github.com/docling-project/docling) · ★ 69k |
+| 🟣 merged | [fix(pptx): move footer placeholders to the furniture layer](https://github.com/docling-project/docling/pull/4746) | [docling-project/docling](https://github.com/docling-project/docling) · ★ 69.1k |
 | 🟣 merged | [fix(contrib): keep histogram_matching output in the template range](https://github.com/kornia/kornia/pull/5794) | [kornia/kornia](https://github.com/kornia/kornia) · ★ 11.4k |
 
 <sub>…and 119 more merged pull requests. Merges by project: mteb 23 · kornia 18 · docling 8 · unity-mcp 8 · browser-compat-data 5 · telegram-mcp 4 · results 4 · LightRAG 4 · bugbug 3 · prismor 3, and 27 more projects.</sub>
