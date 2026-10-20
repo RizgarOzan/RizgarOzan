@@ -12,7 +12,7 @@ earns its cost, and game tools that score a level or catch a broken font before 
 Final-year Computer Education & Instructional Technology student at Hacettepe University, Ankara.
 
 <!-- summary:start -->
-**129 pull requests merged** into 38 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 17 more in review.
+**131 pull requests merged** into 38 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 17 more in review.
 <!-- summary:end -->
 
 <a href="https://rizgarozan.github.io"><img src="assets/site.jpg" width="100%" alt="rizgarozan.github.io: a moonlit field where each sword standing in the ground is one of my projects; scroll down into the smithy for what I'm working on now."></a>
@@ -94,9 +94,9 @@ Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a 
 | 🟣 merged | [fix: make the multilabel classification evaluation cap work](https://github.com/embeddings-benchmark/mteb/pull/5514) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 | 🟣 merged | [tests: write the citation cache as indented JSON](https://github.com/embeddings-benchmark/mteb/pull/5685) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 | 🟣 merged | [dataset: add TurkishRAGEvalRetrieval (Turkish passage retrieval, health)](https://github.com/embeddings-benchmark/mteb/pull/5615) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
-| 🟣 merged | [fix(pptx): move footer placeholders to the furniture layer](https://github.com/docling-project/docling/pull/4746) | [docling-project/docling](https://github.com/docling-project/docling) · ★ 69.1k |
+| 🟣 merged | [fix(pptx): move footer placeholders to the furniture layer](https://github.com/docling-project/docling/pull/4746) | [docling-project/docling](https://github.com/docling-project/docling) · ★ 69.2k |
 
-<sub>…and 124 more merged pull requests. Merges by project: mteb 23 · kornia 18 · unity-mcp 9 · docling 8 · results 5 · browser-compat-data 5 · module-replacements 4 · telegram-mcp 4 · LightRAG 4 · bugbug 3, and 28 more projects.</sub>
+<sub>…and 126 more merged pull requests. Merges by project: mteb 23 · kornia 18 · unity-mcp 9 · docling 8 · results 5 · browser-compat-data 5 · module-replacements 4 · telegram-mcp 4 · LightRAG 4 · future-agi 3, and 28 more projects.</sub>
 <!-- oss:end -->
 
 ## Now · October 2026
