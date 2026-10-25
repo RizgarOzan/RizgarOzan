@@ -12,7 +12,7 @@ earns its cost, and game tools that score a level or catch a broken font before 
 Final-year Computer Education & Instructional Technology student at Hacettepe University, Ankara.
 
 <!-- summary:start -->
-**135 pull requests merged** into 38 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 16 more in review.
+**135 pull requests merged** into 38 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 17 more in review.
 <!-- summary:end -->
 
 <a href="https://rizgarozan.github.io"><img src="assets/site.jpg" width="100%" alt="rizgarozan.github.io: a moonlit field where each sword standing in the ground is one of my projects; scroll down into the smithy for what I'm working on now."></a>
