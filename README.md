@@ -12,7 +12,7 @@ earns its cost, and game tools that score a level or catch a broken font before 
 Final-year Computer Education & Instructional Technology student at Hacettepe University, Ankara.
 
 <!-- summary:start -->
-**139 pull requests merged** into 39 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 14 more in review.
+**140 pull requests merged** into 40 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 14 more in review.
 <!-- summary:end -->
 
 <a href="https://rizgarozan.github.io"><img src="assets/site.jpg" width="100%" alt="rizgarozan.github.io: a moonlit field where each sword standing in the ground is one of my projects; scroll down into the smithy for what I'm working on now."></a>
@@ -91,12 +91,12 @@ Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a 
 | | Pull request | Project |
 |---|---|---|
 | 🟣 merged | [Accept a string main_score_function in NanoBEIREvaluator](https://github.com/huggingface/sentence-transformers/pull/4034) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.2k |
-| 🟣 merged | [fix(custom-tools): keep handler annotations through wrappers on Python 3.14](https://github.com/CoplayDev/unity-mcp/pull/1432) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 15.4k |
+| 🟣 merged | [fix(custom-tools): keep handler annotations through wrappers on Python 3.14](https://github.com/CoplayDev/unity-mcp/pull/1432) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 15.5k |
 | 🟣 merged | [fix: make the multilabel classification evaluation cap work](https://github.com/embeddings-benchmark/mteb/pull/5514) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 | 🟣 merged | [tests: write the citation cache as indented JSON](https://github.com/embeddings-benchmark/mteb/pull/5685) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 | 🟣 merged | [dataset: add TurkishRAGEvalRetrieval (Turkish passage retrieval, health)](https://github.com/embeddings-benchmark/mteb/pull/5615) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 
-<sub>…and 134 more merged pull requests. Merges by project: mteb 23 · kornia 18 · unity-mcp 9 · docling 8 · module-replacements 6 · telegram-mcp 5 · results 5 · browser-compat-data 5 · bugbug 4 · sentence-transformers 4, and 29 more projects.</sub>
+<sub>…and 135 more merged pull requests. Merges by project: mteb 23 · kornia 18 · unity-mcp 9 · docling 8 · module-replacements 6 · telegram-mcp 5 · results 5 · browser-compat-data 5 · bugbug 4 · sentence-transformers 4, and 30 more projects.</sub>
 <!-- oss:end -->
 
 ## Now · October 2026
