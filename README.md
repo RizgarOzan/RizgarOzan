@@ -10,6 +10,9 @@
 I build games, tools and AI systems: retrieval evaluations that say which part of a RAG pipeline
 earns its cost, and game tools that score a level or catch a broken font before anyone ships it.
 Final-year Computer Education & Instructional Technology student at Hacettepe University, Ankara.
+This summer I was a software intern at Barko Elektronik, where I set up a local LLM stack
+on company hardware, wired it to Active Directory, and built FastAPI services in Docker that feed
+Oracle data into live Power BI dashboards.
 
 <!-- summary:start -->
 **152 pull requests merged** into 40 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 15 more in review.
@@ -29,18 +32,18 @@ Final-year Computer Education & Instructional Technology student at Hacettepe Un
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/RizgarOzan/match3-lab">
+<a href="https://github.com/RizgarOzan/lockstep-tactics">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-match3-lab-dark.svg">
-  <img src="assets/card-match3-lab-light.svg" width="100%" alt="02 Match3 Lab — C# match-3 rules core, readable level format, Unity editor tools and a bot simulator. The greedy bot's win rate falls from 100% on level 1 to 50% on level 6; the random bot from 70% to 3%. 1000 games per level.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-lockstep-tactics-dark.svg">
+  <img src="assets/card-lockstep-tactics-light.svg" width="100%" alt="02 Lockstep Tactics — C++20 tactics game, playable in the browser against an integer-only AI, that stays bit-identical across MSVC x64, Apple clang arm64 and WebAssembly: fixed-point maths, own RNG, per-tick replay hashes and a bisector that names the desync. 1000 of 1000 matches end on the same hash; 100 of 100 injected desyncs located; the AI wins 998 of 1000 against random orders.">
 </picture>
 </a>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/RizgarOzan/lockstep-tactics">
+<a href="https://github.com/RizgarOzan/tmp-glyph-audit">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-lockstep-tactics-dark.svg">
-  <img src="assets/card-lockstep-tactics-light.svg" width="100%" alt="03 Lockstep Tactics — C++20 tactics game, playable in the browser against an integer-only AI, that stays bit-identical across MSVC x64, Apple clang arm64 and WebAssembly: fixed-point maths, own RNG, per-tick replay hashes and a bisector that names the desync. 1000 of 1000 matches end on the same hash; 100 of 100 injected desyncs located; the AI wins 978 of 1000 against random orders.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-tmp-glyph-audit-dark.svg">
+  <img src="assets/card-tmp-glyph-audit-light.svg" width="100%" alt="03 TMP Glyph Audit — Unity package that finds every TextMeshPro text the fonts cannot draw, through TMP's real fallback chain. Editor window plus CI exit codes.">
 </picture>
 </a>
 </td>
@@ -55,10 +58,10 @@ Final-year Computer Education & Instructional Technology student at Hacettepe Un
 </a>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/RizgarOzan/tmp-glyph-audit">
+<a href="https://github.com/RizgarOzan/match3-lab">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-tmp-glyph-audit-dark.svg">
-  <img src="assets/card-tmp-glyph-audit-light.svg" width="100%" alt="05 TMP Glyph Audit — Unity package that finds every TextMeshPro text the fonts cannot draw, through TMP's real fallback chain. Editor window plus CI exit codes.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-match3-lab-dark.svg">
+  <img src="assets/card-match3-lab-light.svg" width="100%" alt="05 Match3 Lab — C# match-3 rules core, readable level format, Unity editor tools and a bot simulator. The greedy bot's win rate falls from 100% on level 1 to 50% on level 6; the random bot from 70% to 3%. 1000 games per level.">
 </picture>
 </a>
 </td>
@@ -102,5 +105,5 @@ Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a 
 ## Now · October 2026
 
 - Turkish RAG Eval 0.2.0 is on [PyPI](https://pypi.org/project/turkish-rag-eval/): 300 queries (58 hand-labelled, 242 LLM-drafted and double-labelled) across five models, with the dataset on Hugging Face. The MTEB task is in review ([mteb#5615](https://github.com/embeddings-benchmark/mteb/pull/5615)), and the drafted queries are open for human review as good first issues.
-- [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics) is playable: a C++20 tactics game checked on every push to be bit-identical between MSVC x64, Apple clang arm64 and WebAssembly, with an integer-only AI that wins 978 of 1,000 matches against random orders. [Play it in the browser](https://rizgarozan.github.io/lockstep-tactics/); a saved match verifies tick by tick on any machine. Next: two browsers exchanging commands over a relay.
+- [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics) is playable: a C++20 tactics game checked on every push to be bit-identical between MSVC x64, Apple clang arm64 and WebAssembly, with an integer-only AI that wins 998 of 1,000 matches against random orders. [Play it in the browser](https://rizgarozan.github.io/lockstep-tactics/) against the AI or against a friend in another browser: the two run in lockstep over WebRTC and compare hashes as they go.
 - Graduating in June 2027; open to internships and new-grad roles in applied AI and game engineering.

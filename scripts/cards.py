@@ -212,22 +212,22 @@ def card(t, n, first, last, lines, tags, picto, label):
 CARDS = {
     "turkish-rag-eval": hero,
     "match3-lab": lambda t: card(
-        t, "02", "Match3 ", "Lab",
+        t, "05", "Match3 ", "Lab",
         ["A match-3 workbench, not a match-3 game: an engine-", "independent C# rules core, a level format you can read in", "a diff, and a bot that ranks a level over 1000 games."],
         "C#  ·  UNITY 6  ·  xUNIT  ·  WEBGL", lambda t, x, y: curve(t, x, y + 14, 120, 92),
         "Match3 Lab: C# match-3 rules core, level format, Unity editor tools and a bot simulator; the greedy bot's win rate falls from 100% on level 1 to 50% on level 6"),
     "lockstep-tactics": lambda t: card(
-        t, "03", "Lockstep ", "Tactics",
+        t, "02", "Lockstep ", "Tactics",
         ["A C++20 tactics game, playable in the browser, that stays", "bit-identical across MSVC, clang arm64 and WebAssembly:", "fixed-point, replay hashes, a desync bisector, an integer AI."],
         "C++20  ·  CMAKE  ·  EMSCRIPTEN  ·  RAYLIB", same_hash,
-        "Lockstep Tactics: C++20 tactics game playable in the browser, bit-identical across MSVC x64, Apple clang arm64 and WebAssembly; 1000 of 1000 matches end on the same hash, 100 of 100 injected desyncs located, the integer-only AI wins 978 of 1000 against random orders"),
+        "Lockstep Tactics: C++20 tactics game playable in the browser, bit-identical across MSVC x64, Apple clang arm64 and WebAssembly; 1000 of 1000 matches end on the same hash, 100 of 100 injected desyncs located, the integer-only AI wins 998 of 1000 against random orders"),
     "suspicious-delicacies": lambda t: card(
         t, "04", "Suspicious ", "Delicacies",
         ["A chef with a secret hunts friendly creatures for ingredients,", "cooks, serves and dodges suspicion: restaurant management", "welded to a turn-based RPG. Team of three; demo in progress."],
         "UNITY 6  ·  C#  ·  2D URP  ·  TEAM PROJECT", kitchen_loop,
         "Suspicious Delicacies: restaurant management welded to a turn-based RPG, Unity 6 team project; I own the restaurant, customer AI, QTE, overworld and editor tooling"),
     "tmp-glyph-audit": lambda t: card(
-        t, "05", "TMP Glyph ", "Audit",
+        t, "03", "TMP Glyph ", "Audit",
         ["Finds every TextMeshPro text your fonts cannot draw:", "scenes, prefabs and runtime text files, through TMP's", "real fallback chain. Editor window + CI exit codes."],
         "UNITY PACKAGE  ·  C#  ·  CI", glyph_tiles,
         "TMP Glyph Audit: Unity package that finds every TextMeshPro text the fonts cannot draw"),
