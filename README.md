@@ -15,7 +15,7 @@ on company hardware, wired it to Active Directory, and built FastAPI services in
 Oracle data into live Power BI dashboards.
 
 <!-- summary:start -->
-**152 pull requests merged** into 40 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 15 more in review.
+**152 pull requests merged** into 40 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 14 more in review.
 <!-- summary:end -->
 
 <a href="https://rizgarozan.github.io"><img src="assets/site.jpg" width="100%" alt="rizgarozan.github.io: a moonlit field where each sword standing in the ground is one of my projects; scroll down into the smithy for what I'm working on now."></a>
