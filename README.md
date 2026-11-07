@@ -15,7 +15,7 @@ on company hardware, wired it to Active Directory, and built FastAPI services in
 Oracle data into live Power BI dashboards.
 
 <!-- summary:start -->
-**156 pull requests merged** into 40 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 14 more in review.
+**157 pull requests merged** into 40 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 16 more in review.
 <!-- summary:end -->
 
 <a href="https://rizgarozan.github.io"><img src="assets/site.jpg" width="100%" alt="rizgarozan.github.io: a moonlit field where each sword standing in the ground is one of my projects; scroll down into the smithy for what I'm working on now."></a>
@@ -94,12 +94,12 @@ Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a 
 | | Pull request | Project |
 |---|---|---|
 | 🟣 merged | [Accept a string main_score_function in NanoBEIREvaluator](https://github.com/huggingface/sentence-transformers/pull/4034) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.3k |
-| 🟣 merged | [fix(custom-tools): keep handler annotations through wrappers on Python 3.14](https://github.com/CoplayDev/unity-mcp/pull/1432) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 15.7k |
+| 🟣 merged | [fix(custom-tools): keep handler annotations through wrappers on Python 3.14](https://github.com/CoplayDev/unity-mcp/pull/1432) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 15.8k |
 | 🟣 merged | [fix: make the multilabel classification evaluation cap work](https://github.com/embeddings-benchmark/mteb/pull/5514) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 | 🟣 merged | [tests: write the citation cache as indented JSON](https://github.com/embeddings-benchmark/mteb/pull/5685) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 | 🟣 merged | [dataset: add TurkishRAGEvalRetrieval (Turkish passage retrieval, health)](https://github.com/embeddings-benchmark/mteb/pull/5615) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 
-<sub>…and 151 more merged pull requests. Merges by project: mteb 23 · kornia 18 · snapclaim 13 · unity-mcp 9 · docling 8 · bugbug 6 · module-replacements 6 · telegram-mcp 5 · results 5 · browser-compat-data 5, and 30 more projects.</sub>
+<sub>…and 152 more merged pull requests. Merges by project: mteb 23 · kornia 18 · snapclaim 13 · unity-mcp 9 · docling 8 · telegram-mcp 6 · bugbug 6 · module-replacements 6 · results 5 · browser-compat-data 5, and 30 more projects.</sub>
 <!-- oss:end -->
 
 ## Now · October 2026
