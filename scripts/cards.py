@@ -16,8 +16,8 @@ SANS = "'Segoe UI',system-ui,-apple-system,Ubuntu,'Helvetica Neue',sans-serif"
 MONO = "Consolas,'SF Mono',Menlo,monospace"
 
 # match3-lab docs/curve-1000.csv — win rate per level, 1000 games per bot
-GREEDY = [1.000, 0.980, 0.908, 0.800, 0.597, 0.497]
-RANDOM = [0.701, 0.167, 0.273, 0.297, 0.091, 0.031]
+GREEDY = [1.000, 0.980, 0.908, 0.800, 0.597, 0.497, 0.741]
+RANDOM = [0.701, 0.167, 0.273, 0.297, 0.091, 0.031, 0.042]
 # turkish-rag-eval results/summary.json and results/models/*/summary.json —
 # best nDCG@10 across chunkers; the two dense rows are the default multilingual
 # model and the best of the five measured models (newmindai/Mursit-Large-TR-Retrieval)
@@ -65,21 +65,21 @@ def card_body(t, n, first, last, lines, tags, w):
 # ---------------------------------------------------------------- pictograms
 
 def curve(t, x0, y0, w, h):
-    """Greedy vs random win rate over six levels."""
+    """Greedy vs random win rate over the shipped levels."""
     label = "DIFFICULTY CURVE" if w < 200 else "DIFFICULTY CURVE · 1000 BOT GAMES PER LEVEL"
     out = [text(t, x0, y0 - 18, label, 11, "muted", 600, spacing=1.6)]
     for frac, lab in [(0, "100%"), (0.5, "50%"), (1, "0%")]:
         y = y0 + frac * h
         out.append(f'<line x1="{x0}" y1="{y:.1f}" x2="{x0 + w}" y2="{y:.1f}" stroke="{t["hair"]}"/>')
         out.append(text(t, x0 + w + 10, y + 4, lab, 11, "muted"))
-    step = w / 5
+    step = w / (len(GREEDY) - 1)
     for series, color, dash, width in [(RANDOM, t["muted"], ' stroke-dasharray="4 5"', 1.4), (GREEDY, t["accent"], "", 2.2)]:
         pts = [(x0 + i * step, y0 + (1 - v) * h) for i, v in enumerate(series)]
         d = " ".join(f"{'M' if i == 0 else 'L'}{px:.1f} {py:.1f}" for i, (px, py) in enumerate(pts))
         out.append(f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{width}"{dash} stroke-linejoin="round"/>')
         if not dash:
             out += [f'<circle cx="{px:.1f}" cy="{py:.1f}" r="4" fill="{t["panel"]}" stroke="{color}" stroke-width="2"/>' for px, py in pts]
-    for i in range(6):
+    for i in range(len(GREEDY)):
         out.append(text(t, x0 + i * step, y0 + h + 20, f"0{i + 1}", 11, "muted", anchor="middle", family=MONO))
     dx, dy = (0, 22) if w < 200 else (120, 0)
     for i, (lab, color, dash) in enumerate([("greedy bot", t["accent"], ""), ("random bot", t["muted"], ' stroke-dasharray="4 5"')]):
@@ -215,7 +215,7 @@ CARDS = {
         t, "05", "Match3 ", "Lab",
         ["A match-3 workbench, not a match-3 game: an engine-", "independent C# rules core, a level format you can read in", "a diff, and a bot that ranks a level over 1000 games."],
         "C#  ·  UNITY 6  ·  xUNIT  ·  WEBGL", lambda t, x, y: curve(t, x, y + 14, 120, 92),
-        "Match3 Lab: C# match-3 rules core, level format, Unity editor tools and a bot simulator; the greedy bot's win rate falls from 100% on level 1 to 50% on level 6"),
+        "Match3 Lab: C# match-3 rules core, level format, Unity editor tools and a bot simulator; the greedy bot's win rate falls from 100% on level 1 to 50% on level 6, then 74% on level 7"),
     "lockstep-tactics": lambda t: card(
         t, "02", "Lockstep ", "Tactics",
         ["A C++20 tactics game, playable in the browser, that stays", "bit-identical across MSVC, clang arm64 and WebAssembly:", "fixed-point, replay hashes, a desync bisector, an integer AI."],

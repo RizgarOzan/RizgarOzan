@@ -61,7 +61,7 @@ Oracle data into live Power BI dashboards.
 <a href="https://github.com/RizgarOzan/match3-lab">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-match3-lab-dark.svg">
-  <img src="assets/card-match3-lab-light.svg" width="100%" alt="05 Match3 Lab — C# match-3 rules core, readable level format, Unity editor tools and a bot simulator. The greedy bot's win rate falls from 100% on level 1 to 50% on level 6; the random bot from 70% to 3%. 1000 games per level.">
+  <img src="assets/card-match3-lab-light.svg" width="100%" alt="05 Match3 Lab — C# match-3 rules core, readable level format, Unity editor tools and a bot simulator. The greedy bot's win rate falls from 100% on level 1 to 50% on level 6, then 74% on level 7; the random bot from 70% to 3%, then 4%. 1000 games per level.">
 </picture>
 </a>
 </td>
@@ -102,8 +102,8 @@ Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a 
 <sub>…and 153 more merged pull requests. Merges by project: mteb 23 · kornia 18 · snapclaim 13 · unity-mcp 9 · docling 8 · telegram-mcp 6 · bugbug 6 · module-replacements 6 · results 5 · browser-compat-data 5, and 31 more projects.</sub>
 <!-- oss:end -->
 
-## Now · October 2026
+## Now · November 2026
 
-- Turkish RAG Eval 0.2.0 is on [PyPI](https://pypi.org/project/turkish-rag-eval/): 300 queries (58 hand-labelled, 242 LLM-drafted and double-labelled) across five models, with the dataset on Hugging Face. The MTEB task is in review ([mteb#5615](https://github.com/embeddings-benchmark/mteb/pull/5615)), and the drafted queries are open for human review as good first issues.
+- Turkish RAG Eval 0.2.0 is on [PyPI](https://pypi.org/project/turkish-rag-eval/): 300 queries (58 hand-labelled, 242 LLM-drafted and double-labelled) across five models, with the dataset on Hugging Face. The dataset is now an MTEB task, TurkishRAGEvalRetrieval ([mteb#5615](https://github.com/embeddings-benchmark/mteb/pull/5615), merged), and the drafted queries are open for human review as good first issues.
 - [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics) is playable: a C++20 tactics game checked on every push to be bit-identical between MSVC x64, Apple clang arm64 and WebAssembly, with an integer-only AI that wins 998 of 1,000 matches against random orders. [Play it in the browser](https://rizgarozan.github.io/lockstep-tactics/) against the AI or against a friend in another browser: the two run in lockstep over WebRTC and compare hashes as they go.
 - Graduating in June 2027; open to internships and new-grad roles in applied AI and game engineering.
