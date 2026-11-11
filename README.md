@@ -28,7 +28,7 @@ Final year at Hacettepe University, graduating June 2027 · software intern at B
 
 <p><img src="assets/chip-2.svg" width="880" alt="Last mission"></p>
 
-<p align="center"><img src="assets/intercept-log.svg" width="880" alt="Internship log: Barko Elektronik, complete."></p>
+<p align="center"><img src="assets/intercept-log.svg" width="440" alt="Internship log: Barko Elektronik, complete."></p>
 
 **Barko Elektronik**, software intern, Jul-Aug 2026: local LLMs behind Open WebUI + LDAP, an Oracle to Power BI pipeline, FastAPI + Docker services.
 
