@@ -94,7 +94,7 @@ Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a 
 | | Pull request | Project |
 |---|---|---|
 | 🟣 merged | [Accept a string main_score_function in NanoBEIREvaluator](https://github.com/huggingface/sentence-transformers/pull/4034) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.3k |
-| 🟣 merged | [fix(custom-tools): keep handler annotations through wrappers on Python 3.14](https://github.com/CoplayDev/unity-mcp/pull/1432) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 15.8k |
+| 🟣 merged | [fix(custom-tools): keep handler annotations through wrappers on Python 3.14](https://github.com/CoplayDev/unity-mcp/pull/1432) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 15.9k |
 | 🟣 merged | [fix: make the multilabel classification evaluation cap work](https://github.com/embeddings-benchmark/mteb/pull/5514) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 | 🟣 merged | [tests: write the citation cache as indented JSON](https://github.com/embeddings-benchmark/mteb/pull/5685) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
 | 🟣 merged | [dataset: add TurkishRAGEvalRetrieval (Turkish passage retrieval, health)](https://github.com/embeddings-benchmark/mteb/pull/5615) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
