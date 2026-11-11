@@ -1,109 +1,45 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img src="assets/header-light.svg" width="100%" alt="Rızgar Ozan, AI systems and game tools programmer. I build games, tools and AI systems.">
-</picture>
+## Boss fight: Autobots vs Megatron
 
-<p align="center">
-  <a href="https://rizgarozan.github.io">rizgarozan.github.io</a> · <a href="https://www.linkedin.com/in/rizgarozan/">LinkedIn</a> · <a href="https://rizgarozan.itch.io">itch.io</a> · <a href="https://huggingface.co/RizgarOzan">Hugging Face</a> · <a href="mailto:rizgarozan7@gmail.com">rizgarozan7@gmail.com</a>
-</p>
+Everyone who visits plays the same fight. Click a move, Megatron answers, and you land back here. If the picture hasn't changed yet, wait a few seconds and refresh.
 
-I build games, tools and AI systems: retrieval evaluations that say which part of a RAG pipeline
-earns its cost, and game tools that score a level or catch a broken font before anyone ships it.
-Final-year Computer Education & Instructional Technology student at Hacettepe University, Ankara.
-This summer I was a software intern at Barko Elektronik, where I set up a local LLM stack
-on company hardware, wired it to Active Directory, and built FastAPI services in Docker that feed
-Oracle data into live Power BI dashboards.
+<!-- boss:start -->
+**BUMBLEBEE's turn** · round 1 · wave 1/3: Megatron 6200/6200. Pick a move ↓
+
+<p align="center"><img src="assets/boss.svg?turn=0" width="880" alt="Battle scene. Megatron blocks the way. Bumblebee, Grimlock and Hot Rod transform and stand ready. Next: BUMBLEBEE's turn."></p>
+
+| Move | Cost | Effect |
+|---|---|---|
+| [**ATTACK**](https://profile-boss.rizgarozan7.workers.dev/move?h=bumblebee&m=atk&k=0) | – | STINGER: hit for 150–200 |
+| [**SCOUT**](https://profile-boss.rizgarozan7.workers.dev/move?h=bumblebee&m=skill1&k=0) | 8 EP | Reveal his next move, party takes 40% less this round |
+| [**ENERGON SHARE**](https://profile-boss.rizgarozan7.workers.dev/move?h=bumblebee&m=skill2&k=0) | 14 EP | Heal every hero +240 HP |
+| [**GUARD**](https://profile-boss.rizgarozan7.workers.dev/move?h=bumblebee&m=guard&k=0) | – | Take ½ damage this round, +8 EP |
+| LIMIT: STING OPERATION | 0% | Locked, fills as you attack and take hits |
+
+<sub>Move links not opening on your network? [Play it as an issue](https://github.com/RizgarOzan/RizgarOzan/issues/new?title=boss%3A%20bumblebee%20atk&body=Change%20atk%20to%20skill1%2C%20skill2%2C%20guard%20or%20limit%20for%20another%20move%2C%20then%20press%20Submit.%20A%20GitHub%20Action%20plays%20it%20and%20updates%20the%20README%20in%20about%20a%20minute.) instead.</sub>
+
+**Last moves**
+- @RizgarOzan started a new fight.
+
+
+<!-- boss:end -->
+
+<sub>Heroes go in order (Bumblebee, Grimlock, Hot Rod), then Megatron answers. Below half HP he calls in Soundwave, then come Starscream and Shockwave. GUARD halves a charged blast. If someone moved before you, pick again from the fresh board. Rules and code: [game/](game/).</sub>
+
+<p align="center"><img src="assets/player.svg" width="880" alt="Player card. Rızgar Ozan, Ankara. I make games in Unity and C#, and spend as much time on AI tooling and software. Final-year student at Hacettepe University, Computer Education &amp; Instructional Technology (2023-2027). Last quest: software intern at Barko Elektronik, July-August 2026: local LLMs, Open WebUI with LDAP, Oracle to Power BI, FastAPI and Docker. Moves: Unity and C#, Python, C++20 and WebAssembly, LLM tooling, Docker and Power BI."></p>
 
 <!-- summary:start -->
-**158 pull requests merged** into 41 projects I don't own — mteb, kornia, unity-mcp and docling among them — with 17 more in review.
+**158 pull requests merged** into 41 projects I don't own, among them mteb, kornia, unity-mcp and docling. 17 more in review.
 <!-- summary:end -->
 
-<a href="https://rizgarozan.github.io"><img src="assets/site.jpg" width="100%" alt="rizgarozan.github.io: a moonlit field where each sword standing in the ground is one of my projects; scroll down into the smithy for what I'm working on now."></a>
+**19 LeetCode solutions** in Python and C#: [leetcode-solutions](https://github.com/RizgarOzan/leetcode-solutions)
 
-## Selected work
+**Projects**
 
-<a href="https://github.com/RizgarOzan/turkish-rag-eval">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-turkish-rag-eval-dark.svg">
-  <img src="assets/card-turkish-rag-eval-light.svg" width="100%" alt="01 Turkish RAG Eval — 3 chunkers by 4 retrievers on a hand-labelled Turkish gold set. Best nDCG@10 per retriever: BM25 0.41, BM25 + 5-char prefix 0.51, hybrid RRF 0.61, dense (multilingual) 0.50, dense (Turkish model) 0.78.">
-</picture>
-</a>
+- [Turkish RAG Eval](https://github.com/RizgarOzan/turkish-rag-eval): a Turkish retrieval benchmark, on PyPI and now an MTEB task
+- [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics): C++20 tactics game that stays bit-identical on MSVC, clang and WebAssembly ([play it](https://rizgarozan.github.io/lockstep-tactics/))
+- [TMP Glyph Audit](https://github.com/RizgarOzan/tmp-glyph-audit): Unity package that finds TextMeshPro text your fonts can't draw
+- [Match3 Lab](https://github.com/RizgarOzan/match3-lab): C# match-3 rules core, Unity editor tools and a bot simulator
 
-<table>
-<tr>
-<td width="50%" valign="top">
-<a href="https://github.com/RizgarOzan/lockstep-tactics">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-lockstep-tactics-dark.svg">
-  <img src="assets/card-lockstep-tactics-light.svg" width="100%" alt="02 Lockstep Tactics — C++20 tactics game, playable in the browser against an integer-only AI, that stays bit-identical across MSVC x64, Apple clang arm64 and WebAssembly: fixed-point maths, own RNG, per-tick replay hashes and a bisector that names the desync. 1000 of 1000 matches end on the same hash; 100 of 100 injected desyncs located; the AI wins 998 of 1000 against random orders.">
-</picture>
-</a>
-</td>
-<td width="50%" valign="top">
-<a href="https://github.com/RizgarOzan/tmp-glyph-audit">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-tmp-glyph-audit-dark.svg">
-  <img src="assets/card-tmp-glyph-audit-light.svg" width="100%" alt="03 TMP Glyph Audit — Unity package that finds every TextMeshPro text the fonts cannot draw, through TMP's real fallback chain. Editor window plus CI exit codes.">
-</picture>
-</a>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<a href="https://rizgarozan.github.io/#suspicious-delicacies">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-suspicious-delicacies-dark.svg">
-  <img src="assets/card-suspicious-delicacies-light.svg" width="100%" alt="04 Suspicious Delicacies — Unity 6 team project: a chef with a secret hunts friendly creatures for ingredients, cooks, serves and dodges suspicion; restaurant management welded to a turn-based RPG. I own the restaurant, customer AI, QTE, overworld and editor tooling. Demo in progress.">
-</picture>
-</a>
-</td>
-<td width="50%" valign="top">
-<a href="https://github.com/RizgarOzan/match3-lab">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-match3-lab-dark.svg">
-  <img src="assets/card-match3-lab-light.svg" width="100%" alt="05 Match3 Lab — C# match-3 rules core, readable level format, Unity editor tools and a bot simulator. The greedy bot's win rate falls from 100% on level 1 to 50% on level 6, then 74% on level 7; the random bot from 70% to 3%, then 4%. 1000 games per level.">
-</picture>
-</a>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<a href="https://rizgarozan.itch.io/bilim-dedektifi">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-bilim-dedektifi-dark.svg">
-  <img src="assets/card-bilim-dedektifi-light.svg" width="100%" alt="06 Bilim Dedektifi — short educational mystery game, team course project at Hacettepe, free on itch.io.">
-</picture>
-</a>
-</td>
-<td width="50%" valign="top">
-<a href="https://github.com/ilkhanarda/Code-Enigma">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-code-enigma-dark.svg">
-  <img src="assets/card-code-enigma-light.svg" width="100%" alt="07 Code-Enigma — React 19 academic progress platform built with İlkhan Arda Akmaca; I built the dashboard, peer comparison markers and the filter and settings controls.">
-</picture>
-</a>
-</td>
-</tr>
-</table>
+Graduating in June 2027, open to internships and new-grad roles in applied AI and game engineering.
 
-## Open source
-
-Fixes sent back to the retrieval and Unity tooling I use, refreshed daily by [a workflow](.github/workflows/profile.yml).
-
-<!-- oss:start -->
-| | Pull request | Project |
-|---|---|---|
-| 🟣 merged | [Accept a string main_score_function in NanoBEIREvaluator](https://github.com/huggingface/sentence-transformers/pull/4034) | [huggingface/sentence-transformers](https://github.com/huggingface/sentence-transformers) · ★ 19.3k |
-| 🟣 merged | [fix(custom-tools): keep handler annotations through wrappers on Python 3.14](https://github.com/CoplayDev/unity-mcp/pull/1432) | [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) · ★ 15.9k |
-| 🟣 merged | [fix: make the multilabel classification evaluation cap work](https://github.com/embeddings-benchmark/mteb/pull/5514) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
-| 🟣 merged | [tests: write the citation cache as indented JSON](https://github.com/embeddings-benchmark/mteb/pull/5685) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
-| 🟣 merged | [dataset: add TurkishRAGEvalRetrieval (Turkish passage retrieval, health)](https://github.com/embeddings-benchmark/mteb/pull/5615) | [embeddings-benchmark/mteb](https://github.com/embeddings-benchmark/mteb) · ★ 3.5k |
-
-<sub>…and 153 more merged pull requests. Merges by project: mteb 23 · kornia 18 · snapclaim 13 · unity-mcp 9 · docling 8 · telegram-mcp 6 · bugbug 6 · module-replacements 6 · results 5 · browser-compat-data 5, and 31 more projects.</sub>
-<!-- oss:end -->
-
-## Now · November 2026
-
-- Turkish RAG Eval 0.2.0 is on [PyPI](https://pypi.org/project/turkish-rag-eval/): 300 queries (58 hand-labelled, 242 LLM-drafted and double-labelled) across five models, with the dataset on Hugging Face. The dataset is now an MTEB task, TurkishRAGEvalRetrieval ([mteb#5615](https://github.com/embeddings-benchmark/mteb/pull/5615), merged), and the drafted queries are open for human review as good first issues.
-- [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics) is playable: a C++20 tactics game checked on every push to be bit-identical between MSVC x64, Apple clang arm64 and WebAssembly, with an integer-only AI that wins 998 of 1,000 matches against random orders. [Play it in the browser](https://rizgarozan.github.io/lockstep-tactics/) against the AI or against a friend in another browser: the two run in lockstep over WebRTC and compare hashes as they go.
-- Graduating in June 2027; open to internships and new-grad roles in applied AI and game engineering.
+[github.com/RizgarOzan](https://github.com/RizgarOzan) · [rizgarozan.github.io](https://rizgarozan.github.io) · [LinkedIn](https://www.linkedin.com/in/rizgarozan/) · [itch.io](https://rizgarozan.itch.io)

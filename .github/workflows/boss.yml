@@ -1,0 +1,51 @@
+name: boss
+on:
+  issues:
+    types: [opened]
+  # replays anything left open, if a run was ever dropped
+  workflow_dispatch:
+# one run at a time; each run plays every open boss: issue, so a skipped run loses nothing
+concurrency:
+  group: boss
+  cancel-in-progress: false
+permissions:
+  contents: write
+  issues: write
+jobs:
+  play:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, 'boss:')
+    runs-on: ubuntu-latest
+    env:
+      NUMBER: ${{ github.event.issue.number }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      # the latest main, not the commit from when the issue was opened
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - id: play
+        name: play the moves and commit the new scene
+        # a one-click move can land on main while this runs; then the push is refused,
+        # so start again from the new main and replay the issues on top of it
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for try in 1 2 3; do
+            node game/turn.js
+            git add game/state.json assets/boss.svg README.md
+            git diff --cached --quiet && exit 0
+            git commit -q -m "boss: played $(node -p "require('./replies.json').filter(r=>r.ok).map(r=>'#'+r.number).join(' ')||'nothing'")"
+            git push && exit 0
+            git fetch -q origin "$BRANCH" && git reset -q --hard FETCH_HEAD
+          done
+          exit 1
+        env:
+          BRANCH: ${{ github.event.repository.default_branch }}
+      - name: answer the issues
+        if: always()
+        env:
+          OK: ${{ steps.play.outcome == 'success' }}
+        run: node game/turn.js --reply
