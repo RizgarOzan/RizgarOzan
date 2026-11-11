@@ -1,5 +1,20 @@
 <p align="center"><img src="assets/hero.svg?v=5" width="880" alt="Rızgar Ozan, game and tools developer. Soundwave and Optimus Prime drawn in colored letters."></p>
 
+Final-year student at Hacettepe University, graduating in June 2027. I build games in Unity and C# and work on AI tooling. Looking for internships and new-grad roles in Europe and Turkey.
+
+<!-- summary:start -->
+**159 pull requests merged** into 41 projects I don't own, among them mteb, kornia, unity-mcp and docling. 16 more in review.
+<!-- summary:end -->
+
+**19 LeetCode solutions** in Python and C#: [leetcode-solutions](https://github.com/RizgarOzan/leetcode-solutions)
+
+**Projects**
+
+- [Turkish RAG Eval](https://github.com/RizgarOzan/turkish-rag-eval): a Turkish retrieval benchmark, on PyPI and now an MTEB task
+- [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics): C++20 tactics game that stays bit-identical on MSVC, clang and WebAssembly ([play it](https://rizgarozan.github.io/lockstep-tactics/))
+- [TMP Glyph Audit](https://github.com/RizgarOzan/tmp-glyph-audit): Unity package that finds TextMeshPro text your fonts can't draw
+- [Match3 Lab](https://github.com/RizgarOzan/match3-lab): C# match-3 rules core, Unity editor tools and a bot simulator
+
 ## Duel: Soundwave vs Shockwave
 
 Everyone who visits plays Soundwave in the same duel. Pick a move: Shockwave's AI answers and the scene below is redrawn. If the picture looks unchanged, give it a few seconds and refresh.
@@ -29,19 +44,8 @@ Everyone who visits plays Soundwave in the same duel. Pick a move: Shockwave's A
 
 <p align="center"><img src="assets/player.svg" width="880" alt="Player card. Rızgar Ozan, Ankara. I make games in Unity and C#, and spend as much time on AI tooling and software. Final-year student at Hacettepe University, Computer Education &amp; Instructional Technology (2023-2027). Last quest: software intern at Barko Elektronik, July-August 2026: local LLMs, Open WebUI with LDAP, Oracle to Power BI, FastAPI and Docker. Moves: Unity and C#, Python, C++20 and WebAssembly, LLM tooling, Docker and Power BI."></p>
 
-<!-- summary:start -->
-**159 pull requests merged** into 41 projects I don't own, among them mteb, kornia, unity-mcp and docling. 16 more in review.
-<!-- summary:end -->
+**Last quest:** software intern at Barko Elektronik, Jul-Aug 2026: local LLMs, Open WebUI + LDAP, Oracle to Power BI, FastAPI + Docker.
 
-**19 LeetCode solutions** in Python and C#: [leetcode-solutions](https://github.com/RizgarOzan/leetcode-solutions)
-
-**Projects**
-
-- [Turkish RAG Eval](https://github.com/RizgarOzan/turkish-rag-eval): a Turkish retrieval benchmark, on PyPI and now an MTEB task
-- [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics): C++20 tactics game that stays bit-identical on MSVC, clang and WebAssembly ([play it](https://rizgarozan.github.io/lockstep-tactics/))
-- [TMP Glyph Audit](https://github.com/RizgarOzan/tmp-glyph-audit): Unity package that finds TextMeshPro text your fonts can't draw
-- [Match3 Lab](https://github.com/RizgarOzan/match3-lab): C# match-3 rules core, Unity editor tools and a bot simulator
-
-Graduating in June 2027, open to internships and new-grad roles in applied AI and game engineering.
+**Moves:** Unity and C# (games, editor tools), Python (retrieval evals, APIs), C++20 and WebAssembly (deterministic sims), LLM tooling (local models, RAG), Docker and Power BI (services, dashboards).
 
 [github.com/RizgarOzan](https://github.com/RizgarOzan) · [rizgarozan.github.io](https://rizgarozan.github.io) · [LinkedIn](https://www.linkedin.com/in/rizgarozan/) · [itch.io](https://rizgarozan.itch.io)

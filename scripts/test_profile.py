@@ -37,19 +37,27 @@ def main():
     # each marker block in the README is present exactly once, so the Actions can fill them
     for name in ("summary", "boss"):
         assert readme.count(f"<!-- {name}:start -->") == 1 and readme.count(f"<!-- {name}:end -->") == 1, name
-    # the header banner opens the README, then the game: its heading is the players' landing anchor
+    # the header banner opens the README, then one plain line on who I am and what I'm looking for
     first, second = readme.split("\n\n", 2)[:2]
     assert first.startswith('<p align="center"><img src="assets/hero.svg'), readme[:60]
     assert (ROOT / "assets" / "hero.svg").is_file()
-    assert second == "## Duel: Soundwave vs Shockwave", second
+    assert "Hacettepe" in second and "June 2027" in second and "Europe and Turkey" in second, second
+    # projects and the open-source line come before the game; its heading is the players' landing anchor
+    assert readme.count("\n## Duel: Soundwave vs Shockwave\n") == 1
+    duel = readme.index("## Duel: Soundwave vs Shockwave")
+    assert readme.index("<!-- summary:end -->") < duel and readme.index("**Projects**") < duel
     # hero.svg already carries the name, so no second name heading
     assert not readme.startswith("# ") and "\n# " not in readme
-    assert readme.index("<!-- boss:end -->") < readme.index("<!-- summary:start -->")
 
     # the player card is committed as drawn
     svg = (ROOT / "assets" / "player.svg").read_text(encoding="utf-8")
     assert svg == player.render(), "assets/player.svg is stale: run python scripts/player.py"
     assert 'src="assets/player.svg"' in readme
+    # what the card says is also under it as plain text, so search can read it
+    under = readme.split('src="assets/player.svg"')[1]
+    for fact in ("Barko Elektronik", "Jul-Aug 2026", "Open WebUI + LDAP", "Oracle to Power BI",
+                 "FastAPI + Docker", "Unity and C#", "Python", "C++20"):
+        assert fact in under, fact
 
     print("ok")
 

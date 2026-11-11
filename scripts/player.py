@@ -76,7 +76,7 @@ def render():
     for i, (name, hint) in enumerate(MOVES):
         y = BY + 48 + i * 22
         o.append(T(RX + 16, y, name, size=13, bold=True) + T(RX + RW - 16, y, hint, size=12, fill="#b9c3ff", anchor="end"))
-    o.append(T(RX + 16, BY + 168, "▼ projects below", size=12, fill="#8de0ff", bold=True))
+    o.append(T(RX + 16, BY + 168, "▲ projects above", size=12, fill="#8de0ff", bold=True))
     o.append("</svg>")
     return "\n".join(o) + "\n"
 
