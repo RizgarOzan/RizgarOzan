@@ -28,7 +28,7 @@ Everyone who visits plays the same fight. Click a move, Megatron answers, and yo
 <p align="center"><img src="assets/player.svg" width="880" alt="Player card. Rızgar Ozan, Ankara. I make games in Unity and C#, and spend as much time on AI tooling and software. Final-year student at Hacettepe University, Computer Education &amp; Instructional Technology (2023-2027). Last quest: software intern at Barko Elektronik, July-August 2026: local LLMs, Open WebUI with LDAP, Oracle to Power BI, FastAPI and Docker. Moves: Unity and C#, Python, C++20 and WebAssembly, LLM tooling, Docker and Power BI."></p>
 
 <!-- summary:start -->
-**158 pull requests merged** into 41 projects I don't own, among them mteb, kornia, unity-mcp and docling. 17 more in review.
+**159 pull requests merged** into 41 projects I don't own, among them mteb, kornia, unity-mcp and docling. 16 more in review.
 <!-- summary:end -->
 
 **19 LeetCode solutions** in Python and C#: [leetcode-solutions](https://github.com/RizgarOzan/leetcode-solutions)
