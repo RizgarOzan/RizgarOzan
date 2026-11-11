@@ -19,6 +19,7 @@ jobs:
       - run: python3 scripts/profile.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: python3 scripts/test_profile.py
       - name: Commit if anything changed
         run: |
           git add README.md

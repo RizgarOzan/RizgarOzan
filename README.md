@@ -21,10 +21,10 @@ Final year at Hacettepe University, graduating June 2027 · software intern at B
 
 | Project | What it is | Proof |
 |---|---|---|
-| [Turkish RAG Eval](https://github.com/RizgarOzan/turkish-rag-eval) | Turkish retrieval benchmark, on PyPI and merged into MTEB | nDCG@10 0.78 for a Turkish model vs 0.50 for the default multilingual one, dense retrieval, 58 questions |
-| [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics) | C++20 tactics game with a lockstep sim | 1000 of 1000 seeded matches bit-identical on MSVC, clang and WebAssembly · [play it](https://rizgarozan.github.io/lockstep-tactics/) |
-| [Match3 Lab](https://github.com/RizgarOzan/match3-lab) | match-3 rules core, Unity editor tools, bot simulator | greedy bot wins 100% vs random 70% on level 01, 1000 games |
-| [TMP Glyph Audit](https://github.com/RizgarOzan/tmp-glyph-audit) | Unity package that finds TextMeshPro text your fonts can't draw | 33 core tests |
+| [Turkish RAG Eval](https://github.com/RizgarOzan/turkish-rag-eval) | Turkish retrieval benchmark, in MTEB | nDCG@10 0.78 vs 0.50 |
+| [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics) | C++20 lockstep tactics game | 1000/1000 matches bit-identical · [play](https://rizgarozan.github.io/lockstep-tactics/) |
+| [Match3 Lab](https://github.com/RizgarOzan/match3-lab) | match-3 core, Unity tools, bot sim | bot wins 100% vs random 70% |
+| [TMP Glyph Audit](https://github.com/RizgarOzan/tmp-glyph-audit) | finds TextMeshPro text your fonts can't draw | 33 core tests |
 
 <p><img src="assets/chip-2.svg" width="880" alt="Last mission"></p>
 
