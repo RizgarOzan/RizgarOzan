@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="34" viewBox="0 0 880 34">
+<title>WORK</title>
+<rect x="0" y="4" width="104" height="26" rx="4" fill="#0E0C24"/>
+<rect x="0" y="4" width="36" height="26" rx="4" fill="#D7261E"/>
+<text x="18" y="22" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="13" font-weight="700" fill="#F1E9D8">01</text>
+<text x="48" y="22" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" font-weight="700" letter-spacing="2" fill="#F1E9D8">WORK</text>
+<path d="M114 17H880" stroke="#D7261E" stroke-width="2" stroke-dasharray="2 6"/>
+</svg>

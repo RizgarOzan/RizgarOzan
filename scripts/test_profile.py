@@ -1,7 +1,6 @@
 """Checks for the profile builders:  python scripts/test_profile.py"""
 from pathlib import Path
 
-import player
 import profile as p
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -39,25 +38,24 @@ def main():
         assert readme.count(f"<!-- {name}:start -->") == 1 and readme.count(f"<!-- {name}:end -->") == 1, name
     # the header banner opens the README, then one plain line on who I am and what I'm looking for
     first, second = readme.split("\n\n", 2)[:2]
-    assert first.startswith('<p align="center"><img src="assets/hero.svg'), readme[:60]
-    assert (ROOT / "assets" / "hero.svg").is_file()
+    assert first.startswith('<p align="center"><img src="assets/hero.gif'), readme[:60]
+    assert (ROOT / "assets" / "hero.gif").is_file()
     assert "Hacettepe" in second and "June 2027" in second and "Europe and Turkey" in second, second
     # projects and the open-source line come before the game; its heading is the players' landing anchor
     assert readme.count("\n## Duel: Soundwave vs Shockwave\n") == 1
     duel = readme.index("## Duel: Soundwave vs Shockwave")
-    assert readme.index("<!-- summary:end -->") < duel and readme.index("**Projects**") < duel
-    # hero.svg already carries the name, so no second name heading
+    assert readme.index("<!-- summary:end -->") < duel and readme.index("| Project |") < duel
+    # hero.gif already carries the name, so no second name heading
     assert not readme.startswith("# ") and "\n# " not in readme
 
-    # the player card is committed as drawn
-    svg = (ROOT / "assets" / "player.svg").read_text(encoding="utf-8")
-    assert svg == player.render(), "assets/player.svg is stale: run python scripts/player.py"
-    assert 'src="assets/player.svg"' in readme
-    # what the card says is also under it as plain text, so search can read it
-    under = readme.split('src="assets/player.svg"')[1]
+    # the internship and the stack are plain text above the duel, so search can read them
+    top = readme[:duel]
     for fact in ("Barko Elektronik", "Jul-Aug 2026", "Open WebUI + LDAP", "Oracle to Power BI",
-                 "FastAPI + Docker", "Unity and C#", "Python", "C++20"):
-        assert fact in under, fact
+                 "FastAPI + Docker", "`Unity`", "`Python`", "`C++20`"):
+        assert fact in top, fact
+    # every image the README shows is committed
+    for src in __import__("re").findall(r'src="(assets/[^"?]+)', readme):
+        assert (ROOT / src).is_file(), src
 
     print("ok")
 
