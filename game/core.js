@@ -16,6 +16,9 @@ const WORKER = CONFIG.worker;
 // only the text between these markers is the game's; the rest of the README is never touched
 const BLOCK = /<!-- boss:start -->[\s\S]*?<!-- boss:end -->/g;
 const key = (H) => H.n.toLowerCase().replace(/\s/g, '');
+// short hash of the picture for its URL: turn numbers repeat after a new fight, and GitHub's image cache
+// would keep showing the old frame (or old sprites) under the same ?turn=
+const tag = (t) => { let h = 2166136261; for (let i = 0; i < t.length; i++) h = Math.imul(h ^ t.charCodeAt(i), 16777619); return (h >>> 0).toString(36); };
 const MOVES = { atk: ['atk'], skill1: ['skill', 0], skill2: ['skill', 1], guard: ['guard'], limit: ['limit'] };
 const EFFECT = {
   SCOUT: 'Reveal his next move, party takes 40% less this round', 'ENERGON SHARE': 'Heal every hero +240 HP',
@@ -151,7 +154,7 @@ function game(saved = {}) {
     const section = `<!-- boss:start -->
 ${status}
 
-<p align="center"><img src="assets/boss.svg?turn=${s.k}" width="880" alt="Battle scene. ${s.line.replace(/"/g, "'")}${next}"></p>
+<p align="center"><img src="assets/boss.svg?turn=${s.k}&v=${tag(svg)}" width="880" alt="Battle scene. ${s.line.replace(/"/g, "'")}${next}"></p>
 
 ${block}${fallback}
 

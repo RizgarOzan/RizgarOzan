@@ -37,8 +37,13 @@ def main():
     # each marker block in the README is present exactly once, so the Actions can fill them
     for name in ("summary", "boss"):
         assert readme.count(f"<!-- {name}:start -->") == 1 and readme.count(f"<!-- {name}:end -->") == 1, name
-    # the game comes first: its heading (the players' landing anchor) opens the README
-    assert readme.startswith("## Boss fight: Autobots vs Megatron\n"), readme[:60]
+    # the header banner opens the README, then the game: its heading is the players' landing anchor
+    first, second = readme.split("\n\n", 2)[:2]
+    assert first.startswith('<p align="center"><img src="assets/hero.svg'), readme[:60]
+    assert (ROOT / "assets" / "hero.svg").is_file()
+    assert second == "## Boss fight: Autobots vs Megatron", second
+    # hero.svg already carries the name, so no second name heading
+    assert not readme.startswith("# ") and "\n# " not in readme
     assert readme.index("<!-- boss:end -->") < readme.index("<!-- summary:start -->")
 
     # the player card is committed as drawn
