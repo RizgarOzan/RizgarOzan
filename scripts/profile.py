@@ -1,4 +1,4 @@
-"""Refresh the open-source table in README.md.
+"""Refresh the open-source line in README.md (the summary block under the boss fight).
 
 Runs daily in .github/workflows/profile.yml. Locally:
     GITHUB_TOKEN=$(gh auth token) python scripts/profile.py
@@ -8,11 +8,10 @@ import json
 import os
 import re
 import urllib.request
-from collections import Counter
 from pathlib import Path
 
 LOGIN = "RizgarOzan"
-# The projects whose merges are worth a row of their own; everything else is counted.
+# The projects worth naming in the summary line; every merge is still counted.
 FEATURED = {
     "embeddings-benchmark/mteb",
     "huggingface/sentence-transformers",
@@ -23,17 +22,16 @@ FEATURED = {
     "CoplayDev/unity-mcp",
     "openupm/openupm",
 }
-TOP_PROJECTS = 10  # projects named in the tail line, busiest first
 ROOT = Path(__file__).resolve().parent.parent
 PRS = f"author:{LOGIN} type:pr -user:{LOGIN}"
-PR_FIELDS = "... on PullRequest { title url createdAt mergedAt repository { nameWithOwner url stargazerCount } }"
+PR_FIELDS = "... on PullRequest { repository { nameWithOwner } }"
 QUERY = f"""
 query($after: String) {{
   merged: search(type: ISSUE, first: 100, after: $after, query: "{PRS} is:merged sort:updated-desc") {{
     issueCount pageInfo {{ hasNextPage endCursor }} nodes {{ {PR_FIELDS} }}
   }}
-  open: search(type: ISSUE, first: 20, query: "{PRS} is:open sort:created-desc") {{
-    issueCount nodes {{ {PR_FIELDS} }}
+  open: search(type: ISSUE, first: 1, query: "{PRS} is:open") {{
+    issueCount
   }}
 }}
 """
@@ -53,7 +51,7 @@ def query(after=None):
 
 
 def fetch():
-    """Search returns 100 merges a page; past that the project count and the tail line fell short."""
+    """Search returns 100 merges a page; past that the project count fell short."""
     data = query()
     page = data["merged"]["pageInfo"]
     while page["hasNextPage"]:
@@ -63,35 +61,12 @@ def fetch():
     return data
 
 
-def stars(n):
-    return f"{n / 1000:.1f}k".replace(".0k", "k") if n >= 1000 else str(n)
-
-
-def row(status, pr):
-    repo = pr["repository"]
-    title = pr["title"].replace("|", "\\|")
-    return f"| {status} | [{title}]({pr['url']}) | [{repo['nameWithOwner']}]({repo['url']}) · ★ {stars(repo['stargazerCount'])} |"
-
-
 def featured(pr):
     return pr["repository"]["nameWithOwner"] in FEATURED
 
 
-def rest_line(prs, shown):
-    """One line for the merges that do not get a row, with every merge counted by project."""
-    rest = len(prs) - shown
-    if rest <= 0:
-        return ""
-    counts = Counter(p["repository"]["nameWithOwner"].split("/")[1] for p in prs).most_common()
-    top = " · ".join(f"{name} {n}" for name, n in counts[:TOP_PROJECTS])
-    others = len(counts) - TOP_PROJECTS
-    tail = f", and {others} more project{'s' * (others != 1)}" if others > 0 else ""
-    return (f"<sub>…and {rest} more merged pull request{'s' * (rest != 1)}. "
-            f"Merges by project: {top}{tail}.</sub>")
-
-
 def oss_summary(merged, open_):
-    """The one-line proof under the intro: totals, and the featured projects with the most merges."""
+    """One line: totals, and the featured projects with the most merges."""
     merged_prs = merged["nodes"]
     projects = len({p["repository"]["nameWithOwner"] for p in merged_prs})
     counts = {}
@@ -102,35 +77,15 @@ def oss_summary(merged, open_):
     named = [name for name, _ in sorted(counts.items(), key=lambda kv: -kv[1])[:4]]
     among = ""
     if len(named) > 1:
-        among = f" — {', '.join(named[:-1])} and {named[-1]} among them —"
+        among = f", among them {', '.join(named[:-1])} and {named[-1]}"
     elif named:
-        among = f" — {named[0]} among them —"
-    return (f"**{merged['issueCount']} pull requests merged** into {projects} "
-            f"project{'s' * (projects != 1)} I don't own{among} with {open_['issueCount']} more in review.")
-
-
-PER_PROJECT = 3  # rows one project may take, so a busy week in one repo doesn't hide the others
-
-
-def spread(prs):
-    seen, out = {}, []
-    for p in prs:
-        name = p["repository"]["nameWithOwner"]
-        if featured(p) and seen.get(name, 0) < PER_PROJECT:
-            seen[name] = seen.get(name, 0) + 1
-            out.append(p)
-    return out
-
-
-def oss_table(merged, open_):
-    merged_prs = sorted(merged["nodes"], key=lambda p: p["mergedAt"], reverse=True)
-    rows = ([row("🟣 merged", p) for p in spread(merged_prs)]
-            + [row("🟢 in review", p) for p in spread(open_["nodes"])])[:5]
-    tail = rest_line(merged_prs, sum(r.startswith("| 🟣") for r in rows))
-    if not rows:
-        return tail
-    table = "\n".join(["| | Pull request | Project |", "|---|---|---|", *rows])
-    return "\n\n".join(part for part in [table, tail] if part)
+        among = f", among them {named[0]}"
+    n = merged['issueCount']
+    line = (f"**{n} pull request{'s' * (n != 1)} merged** into {projects} "
+            f"project{'s' * (projects != 1)} I don't own{among}.")
+    if open_["issueCount"]:
+        line += f" {open_['issueCount']} more in review."
+    return line
 
 
 def replace_between(text, name, body):
@@ -144,7 +99,6 @@ def main():
     text = readme.read_text(encoding="utf-8")
     summary = oss_summary(data["merged"], data["open"])
     text = replace_between(text, "summary", summary)
-    text = replace_between(text, "oss", oss_table(data["merged"], data["open"]))
     readme.write_text(text, encoding="utf-8")
     print(summary)
 

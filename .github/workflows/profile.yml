@@ -21,9 +21,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit if anything changed
         run: |
-          git add -A assets README.md
+          git add README.md
           git diff --cached --quiet && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Refresh open-source table"
-          git push
+          git commit -m "Refresh open-source line"
+          # the README boss fight commits to main whenever someone plays; the two touch
+          # different marker blocks, so rebase onto the new main and try again
+          for try in 1 2 3; do
+            git push && exit 0
+            git pull -q --rebase origin main
+          done
+          exit 1
