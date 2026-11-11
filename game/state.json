@@ -1,52 +1,45 @@
 {
+ "duel": true,
  "state": {
-  "boss": 6200,
   "hp": [
-   900,
-   1300,
-   1000
+   3000
   ],
   "ep": [
-   36,
-   30,
-   34
+   40
   ],
   "lim": [
-   0,
-   0,
    0
   ],
+  "boss": 3750,
   "active": 0,
   "mode": "cmd",
   "menu": "main",
-  "next": {
-   "n": "FUSION CANNON",
-   "a": 320,
-   "b": 390,
-   "beam": true,
-   "say": "Hold still. This only hurts for the rest of your life."
-  },
   "scouted": false,
   "shield": false,
-  "taunt": false,
   "guard": [
-   false,
-   false,
    false
   ],
   "charged": false,
-  "p2": false,
-  "queue": [],
-  "speaker": "MEGATRON",
-  "speech": "Three Autobots? Optimus sends me scouts and scrap. Kneel, and I may let you rust in peace.",
-  "line": "Megatron blocks the way. Bumblebee, Grimlock and Hot Rod transform and stand ready.",
+  "repairs": 0,
+  "hist": [],
+  "speaker": "SHOCKWAVE",
+  "speech": "Soundwave. Two Decepticons, one room. Logic says only one of us leaves it functional.",
+  "line": "Soundwave and Shockwave face off, one on one.",
   "k": 0,
   "fx": null,
   "win": false,
-  "round": 1
+  "round": 1,
+  "why": "",
+  "next": {
+   "n": "ARM CANNON",
+   "a": 230,
+   "b": 280,
+   "beam": true,
+   "say": "Resistance is illogical."
+  }
  },
  "log": [
-  "@RizgarOzan started a new fight."
+  "Soundwave and Shockwave face off."
  ],
  "stats": {},
  "crowd": {
@@ -54,11 +47,7 @@
   "moves": 0
  },
  "hall": [],
- "dmg": [
-  0,
-  0,
-  0
- ],
  "best": null,
- "wave": 0
+ "seq": 0,
+ "scene": "assets/scene-0.svg"
 }

@@ -41,7 +41,7 @@ def main():
     first, second = readme.split("\n\n", 2)[:2]
     assert first.startswith('<p align="center"><img src="assets/hero.svg'), readme[:60]
     assert (ROOT / "assets" / "hero.svg").is_file()
-    assert second == "## Boss fight: Autobots vs Megatron", second
+    assert second == "## Duel: Soundwave vs Shockwave", second
     # hero.svg already carries the name, so no second name heading
     assert not readme.startswith("# ") and "\n# " not in readme
     assert readme.index("<!-- boss:end -->") < readme.index("<!-- summary:start -->")

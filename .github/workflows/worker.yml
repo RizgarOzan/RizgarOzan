@@ -1,0 +1,67 @@
+name: worker
+# The one-click Worker bundles its own copy of game/ when it is deployed, so it is redeployed whenever
+# game/ or worker/ changes on main. The README only links to it once a deploy of the current code has
+# gone through ("live" in game/config.json); until then its move links open a prefilled issue instead.
+on:
+  push:
+    branches: [main]
+    paths: ['game/**', 'worker/**', '.github/workflows/worker.yml']
+  workflow_dispatch:
+concurrency:
+  group: boss
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  deploy:
+    # needs the repo secret CLOUDFLARE_API_TOKEN (template "Edit Cloudflare Workers");
+    # CLOUDFLARE_ACCOUNT_ID is only needed if the token can see more than one account
+    if: github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message, 'boss:')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: run the tests
+        run: npm test
+      - name: check the Cloudflare token is set
+        id: token
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::warning::CLOUDFLARE_API_TOKEN is not set, so the Worker was not deployed. README move links keep opening issues."
+            echo "set=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "set=true" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.token.outputs.set == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: worker
+          command: deploy
+      - name: switch the README links to one-click
+        if: steps.token.outputs.set == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for try in 1 2 3; do
+            node -e "
+              const fs = require('fs'), f = 'game/config.json', c = JSON.parse(fs.readFileSync(f, 'utf8'));
+              if (c.live) process.exit(0);
+              c.live = true; fs.writeFileSync(f, JSON.stringify(c, null, 1) + '\n');
+              delete require.cache[require.resolve('./game/core')];
+              const { game } = require('./game/core'), g = game(JSON.parse(fs.readFileSync('game/state.json', 'utf8')));
+              fs.writeFileSync('README.md', g.files(fs.readFileSync('README.md', 'utf8')).readme);"
+            git add game/config.json README.md
+            git diff --cached --quiet && exit 0
+            git commit -q -m "Turn one-click moves on: the Worker runs the current code"
+            git push && exit 0
+            git fetch -q origin main && git reset -q --hard FETCH_HEAD
+          done
+          exit 1
