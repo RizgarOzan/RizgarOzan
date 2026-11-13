@@ -4,7 +4,7 @@
 Final year at Hacettepe University, graduating June 2027 · software intern at Barko Elektronik, Jul-Aug 2026 · looking for game/tools programmer and LLM-eval internships and new-grad roles in Europe and Turkey.
 
 <!-- summary:start -->
-**159 pull requests merged** into 41 projects I don't own, among them mteb, kornia, unity-mcp and docling. 16 more in review.
+**159 pull requests merged** into 41 projects I don't own, among them mteb, kornia, unity-mcp and docling. 17 more in review.
 <!-- summary:end -->
 
 `C#` `Unity` `C++20` `WebAssembly` `Python` `FastAPI` `Docker` `local LLMs / RAG`
