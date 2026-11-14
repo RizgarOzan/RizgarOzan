@@ -2,15 +2,15 @@
  "duel": true,
  "state": {
   "hp": [
-   2749
+   2494
   ],
   "ep": [
-   30
+   20
   ],
   "lim": [
-   24
+   48
   ],
-  "boss": 3502,
+  "boss": 3232,
   "active": 0,
   "mode": "cmd",
   "menu": "main",
@@ -22,12 +22,13 @@
   "charged": false,
   "repairs": 0,
   "hist": [
+   "skill0",
    "skill0"
   ],
   "speaker": "SHOCKWAVE",
   "speech": "Resistance is illogical.",
-  "line": "Shockwave uses ARM CANNON. 251 damage.",
-  "k": 2,
+  "line": "Shockwave uses ARM CANNON. 255 damage.",
+  "k": 4,
   "fx": {
    "actor": "meg",
    "heroHit": [
@@ -37,7 +38,7 @@
     {
      "x": 636,
      "y": 238,
-     "t": "251",
+     "t": "255",
      "c": "#ff6b8a"
     }
    ],
@@ -48,25 +49,31 @@
    "flash": ""
   },
   "win": false,
-  "round": 2,
-  "why": "Standard engagement.",
+  "round": 3,
+  "why": "Close range is efficient.",
   "next": {
-   "n": "ARM CANNON",
-   "a": 230,
-   "b": 280,
-   "beam": true,
-   "say": "Resistance is illogical."
+   "n": "CRUSHING GRIP",
+   "a": 190,
+   "b": 230,
+   "pierce": true,
+   "say": "Your guard is a pattern. Patterns can be broken."
   },
   "queue": []
  },
  "log": [
   "Soundwave and Shockwave face off.",
   "@RizgarOzan · Laserbeak makes two passes: 136 and 112.",
-  "Shockwave uses ARM CANNON. 251 damage."
+  "Shockwave uses ARM CANNON. 251 damage.",
+  "@SemihAsln · Laserbeak makes two passes: 133 and 137.",
+  "Shockwave uses ARM CANNON. 255 damage."
  ],
  "stats": {
   "RizgarOzan": {
    "dmg": 248,
+   "moves": 1
+  },
+  "SemihAsln": {
+   "dmg": 270,
    "moves": 1
   }
  },
@@ -76,9 +83,9 @@
  },
  "hall": [],
  "best": {
-  "n": "@RizgarOzan",
-  "d": 248
+  "n": "@SemihAsln",
+  "d": 270
  },
- "seq": 1,
- "scene": "assets/scene-1.svg"
+ "seq": 2,
+ "scene": "assets/scene-2.svg"
 }
