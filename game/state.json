@@ -2,71 +2,81 @@
  "duel": true,
  "state": {
   "hp": [
-   2299
+   2094
   ],
   "ep": [
-   6
+   20
   ],
   "lim": [
-   74
+   100
   ],
   "boss": 2876,
   "active": 0,
   "mode": "cmd",
   "menu": "main",
-  "scouted": true,
+  "scouted": false,
   "shield": false,
   "guard": [
    false
   ],
-  "charged": true,
+  "charged": false,
   "repairs": 0,
   "hist": [
    "skill0",
    "skill0",
    "skill0",
-   "skill1"
+   "skill1",
+   "guard"
   ],
   "speaker": "SHOCKWAVE",
-  "speech": "Diverting all power to the cannon. Impact in one turn.",
-  "line": "Shockwave diverts all power to his arm cannon. LOGIC CANNON next turn. Guard!",
-  "k": 8,
+  "speech": "Logic. Is. Absolute.",
+  "line": "Shockwave uses LOGIC CANNON. 205 damage.",
+  "k": 10,
   "fx": {
    "actor": "meg",
-   "heroHit": [],
-   "pops": [],
-   "banner": "POWER DIVERT",
+   "heroHit": [
+    0
+   ],
+   "pops": [
+    {
+     "x": 636,
+     "y": 238,
+     "t": "205",
+     "c": "#ff6b8a"
+    }
+   ],
+   "banner": "LOGIC CANNON",
    "bannerBg": "#5a2a9a",
-   "shake": false,
-   "beam": -1,
-   "flash": ""
+   "shake": true,
+   "beam": 0,
+   "flash": "#b48cff"
   },
   "win": false,
-  "round": 5,
-  "why": "The cannon is charged.",
+  "round": 6,
+  "why": "Maximum output.",
   "next": {
-   "n": "LOGIC CANNON",
-   "a": 520,
-   "b": 590,
+   "n": "ARM CANNON",
+   "a": 230,
+   "b": 280,
    "beam": true,
-   "say": "Logic. Is. Absolute."
+   "say": "Resistance is illogical."
   },
   "queue": []
  },
  "log": [
-  "@RizgarOzan · Laserbeak makes two passes: 136 and 112.",
-  "Shockwave uses ARM CANNON. 251 damage.",
   "@SemihAsln · Laserbeak makes two passes: 133 and 137.",
   "Shockwave uses ARM CANNON. 255 damage.",
   "@RizgarOzan · Laserbeak makes two passes: 115 and 122.",
   "Shockwave uses CRUSHING GRIP. 195 damage.",
   "@RizgarOzan · Soundwave probes Shockwave's mind for 119 damage: POWER DIVERT is coming, and his next plan will show. Incoming damage halved this round.",
-  "Shockwave diverts all power to his arm cannon. LOGIC CANNON next turn. Guard!"
+  "Shockwave diverts all power to his arm cannon. LOGIC CANNON next turn. Guard!",
+  "@RizgarOzan · Soundwave braces, recovers 10 EP and builds his limit.",
+  "Shockwave uses LOGIC CANNON. 205 damage."
  ],
  "stats": {
   "RizgarOzan": {
    "dmg": 604,
-   "moves": 3
+   "moves": 4
   },
   "SemihAsln": {
    "dmg": 270,
@@ -82,6 +92,6 @@
   "n": "@SemihAsln",
   "d": 270
  },
- "seq": 4,
- "scene": "assets/scene-4.svg"
+ "seq": 5,
+ "scene": "assets/scene-5.svg"
 }
