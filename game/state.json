@@ -2,15 +2,15 @@
  "duel": true,
  "state": {
   "hp": [
-   2494
+   2299
   ],
   "ep": [
-   20
+   10
   ],
   "lim": [
-   48
+   68
   ],
-  "boss": 3232,
+  "boss": 2995,
   "active": 0,
   "mode": "cmd",
   "menu": "main",
@@ -23,12 +23,13 @@
   "repairs": 0,
   "hist": [
    "skill0",
+   "skill0",
    "skill0"
   ],
   "speaker": "SHOCKWAVE",
-  "speech": "Resistance is illogical.",
-  "line": "Shockwave uses ARM CANNON. 255 damage.",
-  "k": 4,
+  "speech": "Your guard is a pattern. Patterns can be broken.",
+  "line": "Shockwave uses CRUSHING GRIP. 195 damage.",
+  "k": 6,
   "fx": {
    "actor": "meg",
    "heroHit": [
@@ -38,25 +39,23 @@
     {
      "x": 636,
      "y": 238,
-     "t": "255",
+     "t": "195",
      "c": "#ff6b8a"
     }
    ],
-   "banner": "ARM CANNON",
+   "banner": "CRUSHING GRIP",
    "bannerBg": "#5a2a9a",
-   "shake": true,
-   "beam": 0,
+   "shake": false,
+   "beam": -1,
    "flash": ""
   },
   "win": false,
-  "round": 3,
-  "why": "Close range is efficient.",
+  "round": 4,
+  "why": "Probability favours a decisive strike.",
   "next": {
-   "n": "CRUSHING GRIP",
-   "a": 190,
-   "b": 230,
-   "pierce": true,
-   "say": "Your guard is a pattern. Patterns can be broken."
+   "n": "POWER DIVERT",
+   "charge": true,
+   "say": "Diverting all power to the cannon. Impact in one turn."
   },
   "queue": []
  },
@@ -65,12 +64,14 @@
   "@RizgarOzan · Laserbeak makes two passes: 136 and 112.",
   "Shockwave uses ARM CANNON. 251 damage.",
   "@SemihAsln · Laserbeak makes two passes: 133 and 137.",
-  "Shockwave uses ARM CANNON. 255 damage."
+  "Shockwave uses ARM CANNON. 255 damage.",
+  "@RizgarOzan · Laserbeak makes two passes: 115 and 122.",
+  "Shockwave uses CRUSHING GRIP. 195 damage."
  ],
  "stats": {
   "RizgarOzan": {
-   "dmg": 248,
-   "moves": 1
+   "dmg": 485,
+   "moves": 2
   },
   "SemihAsln": {
    "dmg": 270,
@@ -86,6 +87,6 @@
   "n": "@SemihAsln",
   "d": 270
  },
- "seq": 2,
- "scene": "assets/scene-2.svg"
+ "seq": 3,
+ "scene": "assets/scene-3.svg"
 }
