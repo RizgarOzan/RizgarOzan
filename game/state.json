@@ -2,15 +2,15 @@
  "duel": true,
  "state": {
   "hp": [
-   2094
+   1836
   ],
   "ep": [
-   20
+   24
   ],
   "lim": [
-   100
+   18
   ],
-  "boss": 2876,
+  "boss": 2134,
   "active": 0,
   "mode": "cmd",
   "menu": "main",
@@ -26,12 +26,13 @@
    "skill0",
    "skill0",
    "skill1",
-   "guard"
+   "guard",
+   "limit"
   ],
   "speaker": "SHOCKWAVE",
-  "speech": "Logic. Is. Absolute.",
-  "line": "Shockwave uses LOGIC CANNON. 205 damage.",
-  "k": 10,
+  "speech": "Resistance is illogical.",
+  "line": "Shockwave uses ARM CANNON. 258 damage.",
+  "k": 12,
   "fx": {
    "actor": "meg",
    "heroHit": [
@@ -41,18 +42,18 @@
     {
      "x": 636,
      "y": 238,
-     "t": "205",
+     "t": "258",
      "c": "#ff6b8a"
     }
    ],
-   "banner": "LOGIC CANNON",
+   "banner": "ARM CANNON",
    "bannerBg": "#5a2a9a",
    "shake": true,
    "beam": 0,
-   "flash": "#b48cff"
+   "flash": ""
   },
   "win": false,
-  "round": 6,
+  "round": 7,
   "why": "Maximum output.",
   "next": {
    "n": "ARM CANNON",
@@ -64,19 +65,19 @@
   "queue": []
  },
  "log": [
-  "@SemihAsln · Laserbeak makes two passes: 133 and 137.",
-  "Shockwave uses ARM CANNON. 255 damage.",
   "@RizgarOzan · Laserbeak makes two passes: 115 and 122.",
   "Shockwave uses CRUSHING GRIP. 195 damage.",
   "@RizgarOzan · Soundwave probes Shockwave's mind for 119 damage: POWER DIVERT is coming, and his next plan will show. Incoming damage halved this round.",
   "Shockwave diverts all power to his arm cannon. LOGIC CANNON next turn. Guard!",
   "@RizgarOzan · Soundwave braces, recovers 10 EP and builds his limit.",
-  "Shockwave uses LOGIC CANNON. 205 damage."
+  "Shockwave uses LOGIC CANNON. 205 damage.",
+  "@RizgarOzan · Soundwave ejects every cassette at once. 742 damage.",
+  "Shockwave uses ARM CANNON. 258 damage."
  ],
  "stats": {
   "RizgarOzan": {
-   "dmg": 604,
-   "moves": 4
+   "dmg": 1346,
+   "moves": 5
   },
   "SemihAsln": {
    "dmg": 270,
@@ -89,9 +90,9 @@
  },
  "hall": [],
  "best": {
-  "n": "@SemihAsln",
-  "d": 270
+  "n": "@RizgarOzan",
+  "d": 742
  },
- "seq": 5,
- "scene": "assets/scene-5.svg"
+ "seq": 6,
+ "scene": "assets/scene-6.svg"
 }
