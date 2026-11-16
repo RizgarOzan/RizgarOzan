@@ -16,14 +16,14 @@ Final year at Hacettepe University, graduating June 2027 · software intern at B
 <p align="center">
 <a href="https://github.com/RizgarOzan/turkish-rag-eval"><img src="assets/card-rag.svg" width="400" alt="Turkish RAG Eval: nDCG@10 0.78 vs 0.50"></a>
 <a href="https://rizgarozan.github.io/lockstep-tactics/"><img src="assets/card-lockstep.svg" width="400" alt="Lockstep Tactics: 1000 of 1000 matches bit-identical"></a>
-<a href="https://github.com/RizgarOzan/match3-lab"><img src="assets/card-match3.svg" width="400" alt="Match3 Lab: greedy bot 100% vs random 70%"></a>
+<a href="https://github.com/RizgarOzan/match3-lab"><img src="assets/card-match3.svg" width="400" alt="Match3 Lab: greedy bot 100% vs random 70% on level 01"></a>
 </p>
 
 | Project | What it is | Proof |
 |---|---|---|
 | [Turkish RAG Eval](https://github.com/RizgarOzan/turkish-rag-eval) | Turkish retrieval benchmark, in MTEB | nDCG@10 0.78 vs 0.50 |
 | [Lockstep Tactics](https://github.com/RizgarOzan/lockstep-tactics) | C++20 lockstep tactics game | 1000/1000 matches bit-identical · [play](https://rizgarozan.github.io/lockstep-tactics/) |
-| [Match3 Lab](https://github.com/RizgarOzan/match3-lab) | match-3 core, Unity tools, bot sim | bot wins 100% vs random 70% |
+| [Match3 Lab](https://github.com/RizgarOzan/match3-lab) | match-3 core, Unity tools, bot sim | greedy bot wins 50–100% vs random 3–70%, 7 levels, 1000 games each |
 | [TMP Glyph Audit](https://github.com/RizgarOzan/tmp-glyph-audit) | finds TextMeshPro text your fonts can't draw | 33 core tests |
 
 <p><img src="assets/chip-2.svg" width="880" alt="Last mission"></p>
