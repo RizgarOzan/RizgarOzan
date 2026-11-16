@@ -2,15 +2,15 @@
  "duel": true,
  "state": {
   "hp": [
-   1836
+   1581
   ],
   "ep": [
-   24
+   28
   ],
   "lim": [
-   18
+   46
   ],
-  "boss": 2134,
+  "boss": 1911,
   "active": 0,
   "mode": "cmd",
   "menu": "main",
@@ -24,15 +24,15 @@
   "hist": [
    "skill0",
    "skill0",
-   "skill0",
    "skill1",
    "guard",
-   "limit"
+   "limit",
+   "atk"
   ],
   "speaker": "SHOCKWAVE",
   "speech": "Resistance is illogical.",
-  "line": "Shockwave uses ARM CANNON. 258 damage.",
-  "k": 12,
+  "line": "Shockwave uses ARM CANNON. 255 damage.",
+  "k": 14,
   "fx": {
    "actor": "meg",
    "heroHit": [
@@ -42,7 +42,7 @@
     {
      "x": 636,
      "y": 238,
-     "t": "258",
+     "t": "255",
      "c": "#ff6b8a"
     }
    ],
@@ -53,31 +53,29 @@
    "flash": ""
   },
   "win": false,
-  "round": 7,
-  "why": "Maximum output.",
+  "round": 8,
+  "why": "Probability favours a decisive strike.",
   "next": {
-   "n": "ARM CANNON",
-   "a": 230,
-   "b": 280,
-   "beam": true,
-   "say": "Resistance is illogical."
+   "n": "POWER DIVERT",
+   "charge": true,
+   "say": "Diverting all power to the cannon. Impact in one turn."
   },
   "queue": []
  },
  "log": [
-  "@RizgarOzan · Laserbeak makes two passes: 115 and 122.",
-  "Shockwave uses CRUSHING GRIP. 195 damage.",
   "@RizgarOzan · Soundwave probes Shockwave's mind for 119 damage: POWER DIVERT is coming, and his next plan will show. Incoming damage halved this round.",
   "Shockwave diverts all power to his arm cannon. LOGIC CANNON next turn. Guard!",
   "@RizgarOzan · Soundwave braces, recovers 10 EP and builds his limit.",
   "Shockwave uses LOGIC CANNON. 205 damage.",
   "@RizgarOzan · Soundwave ejects every cassette at once. 742 damage.",
-  "Shockwave uses ARM CANNON. 258 damage."
+  "Shockwave uses ARM CANNON. 258 damage.",
+  "@RizgarOzan · Soundwave uses SONIC BLASTER. 223 damage.",
+  "Shockwave uses ARM CANNON. 255 damage."
  ],
  "stats": {
   "RizgarOzan": {
-   "dmg": 1346,
-   "moves": 5
+   "dmg": 1569,
+   "moves": 6
   },
   "SemihAsln": {
    "dmg": 270,
@@ -93,6 +91,6 @@
   "n": "@RizgarOzan",
   "d": 742
  },
- "seq": 6,
- "scene": "assets/scene-6.svg"
+ "seq": 7,
+ "scene": "assets/scene-7.svg"
 }
