@@ -1,6 +1,6 @@
-<p align="center"><img src="assets/hero.gif" width="880" alt="Rızgar Ozan, game and tools programmer. Soundwave drawn one letter per pixel."></p>
+<p align="center"><img src="assets/hero.gif" width="880" alt="Rızgar Ozan, AI systems and game programmer. C#, Python, Unity. Soundwave drawn one letter per pixel."></p>
 
-**Unity/C# game and tools programmer. I also build LLM eval tooling: [Turkish RAG Eval](https://github.com/RizgarOzan/turkish-rag-eval) is now an MTEB task.**<br>
+**AI systems and game programmer. C#, Python, Unity. I also build LLM eval tooling: [Turkish RAG Eval](https://github.com/RizgarOzan/turkish-rag-eval) is now an MTEB task.**<br>
 Final year at Hacettepe University, graduating June 2027 · software intern at Barko Elektronik, Jul-Aug 2026 · looking for game/tools programmer and LLM-eval internships and new-grad roles in Europe and Turkey.
 
 <!-- summary:start -->
